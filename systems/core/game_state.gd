@@ -177,7 +177,10 @@ func complete_quest(qid: String) -> bool:
 	if rewards.is_empty():
 		return false
 	for obj in q.objectives:
-		if obj.type == "collect":
+		if obj.type == "collect" and DB.stackable_def(obj.target).get("category", "") == "quest_items":
+			# hand over every fragment: they have no use once the quest is done
+			character.inventory.consume(obj.target, character.inventory.count_of(obj.target))
+		elif obj.type == "collect":
 			character.inventory.consume(obj.target, int(obj.count))
 	award_xp(int(rewards.get("xp", 0)))
 	add_gold(int(rewards.get("gold", 0)))

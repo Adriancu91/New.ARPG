@@ -16,6 +16,8 @@ var _transitioning := 0.0
 var summon_ids: Array = []
 var arena_center := Vector3.ZERO
 var boss_name := ""
+var _volley := 0
+var _volley_hits := {}          # volley id -> hits landed on the player
 
 
 static func create_boss(lvl: int) -> BossVorthane:
@@ -115,12 +117,14 @@ func _sanguine_bolts(to_player: Vector3) -> void:
 		dir.y = 0
 		dir = dir.normalized()
 		var spread := deg_to_rad(70.0)
+		_volley += 1
+		var vid := _volley
 		for i in count:
 			var a := -spread * 0.5 + spread * float(i) / float(count - 1)
 			var d := dir.rotated(Vector3.UP, a)
 			Projectile.spawn(self, global_position + Vector3(0, 2.2, 0) + d * 1.5, d, {
 				"team": "enemy", "speed": 13.0, "range": 26.0, "color": Color(0.95, 0.2, 0.35),
-				"size": 0.3, "make_hit": _boss_hit.bind(0.8, 3.0), "source": self, "light": i % 2 == 0})
+				"size": 0.3, "make_hit": _bolt_hit.bind(vid), "source": self, "light": i % 2 == 0})
 		Audio.play("spell_shadow"))
 	_busy = t + 0.4
 	_attack_cd = 2.2
@@ -154,6 +158,17 @@ func _requiem_nova() -> void:
 		"on_fire": func(_h): Audio.play("explosion")})
 	_busy = 1.7
 	_attack_cd = 3.0
+
+
+## A volley can hit the player at most twice, so standing in the fan hurts
+## but is never an instant kill.
+func _bolt_hit(t, vid: int) -> Damage.Hit:
+	var n: int = _volley_hits.get(vid, 0) + 1
+	_volley_hits[vid] = n
+	var h := _boss_hit(t, 0.7, 3.0)
+	if n > 2:
+		h.amount = 0.0
+	return h
 
 
 func _boss_hit(t, mult: float, kb: float) -> Damage.Hit:
@@ -270,7 +285,7 @@ func _die() -> void:
 	Events.boss_encounter_ended.emit()
 	if Game.character:
 		var loot := LootTable.roll_boss(enemy_id, level, Game.character.class_id, Game.rng)
-		LootPickup.drop_bundle(self, global_position, loot, true)
+		LootPickup.drop_bundle(self, global_position, loot, true, "boss:" + enemy_id)
 	Events.notify.emit("VICTORY  -  Vorthane, the Hollow Bishop has fallen", Color(1.0, 0.85, 0.4))
 	Audio.play_music("music_reliquary")
 	var tw := create_tween()

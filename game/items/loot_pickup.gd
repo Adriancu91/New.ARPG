@@ -9,6 +9,7 @@ const PICKUP_RADIUS := 1.25
 var item: Item = null
 var gold := 0
 var persist_id := ""            # world-placed pickups remember being taken
+var origin := ""                # e.g. "enemy:hollow_sentinel", "chest:chest_chapel", "boss:vorthane"
 var _t := 0.0
 var _label: Label3D
 var _blocked_msg_t := 0.0
@@ -17,7 +18,7 @@ var _spawn_to := Vector3.ZERO
 var _fly := 0.0
 
 
-static func drop_bundle(ctx: Node, pos: Vector3, loot: Dictionary, big: bool = false) -> Array:
+static func drop_bundle(ctx: Node, pos: Vector3, loot: Dictionary, big: bool = false, origin_: String = "") -> Array:
 	var out: Array = []
 	var n: int = loot.items.size() + (1 if loot.gold > 0 else 0)
 	var i := 0
@@ -28,6 +29,8 @@ static func drop_bundle(ctx: Node, pos: Vector3, loot: Dictionary, big: bool = f
 	for it in loot.items:
 		out.append(spawn(ctx, pos, it, 0, _scatter(i, n, radius, pos)))
 		i += 1
+	for p in out:
+		p.origin = origin_
 	return out
 
 

@@ -72,5 +72,5 @@ func interact(player) -> void:
 	for spec in guaranteed:
 		var parts: PackedStringArray = spec.split(":")
 		loot.items.append(Item.make_stack(parts[0], int(parts[1]) if parts.size() > 1 else 1))
-	LootPickup.drop_bundle(self, global_position + Vector3(0, 0.5, 0) + global_transform.basis.z * 0.9, loot)
+	LootPickup.drop_bundle(self, global_position + Vector3(0, 0.5, 0) + global_transform.basis.z * 0.9, loot, false, "chest:" + object_id)
 	super.interact(player)

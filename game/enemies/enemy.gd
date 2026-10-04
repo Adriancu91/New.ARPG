@@ -437,4 +437,4 @@ func _drop_loot() -> void:
 	if Game.character == null:
 		return
 	var loot := LootTable.roll_enemy(enemy_id, level, Game.rng, Game.loot_context())
-	LootPickup.drop_bundle(self, global_position, loot)
+	LootPickup.drop_bundle(self, global_position, loot, false, "enemy:" + enemy_id)
