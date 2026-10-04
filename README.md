@@ -20,22 +20,22 @@
 - **Quests**: data-driven quest chain with kill / collect / explore / interact / boss objectives, branching NPC dialogue.
 - **Local saves**: manual save, autosave (zone change, quest completion, boss, every 2 min) and load. No account, login, server or network code.
 
-## Controls (keyboard + mouse)
+## Controls (mouse first, like classic ARPGs — keyboard also works)
 
-| Action | Key |
-|---|---|
-| Move | W A S D |
-| Attack / heavy attack (aim with the mouse) | Left / Right mouse button |
-| Dodge | Space |
-| Block (Dawnwarden) | Shift (hold) |
-| Skills | 1 – 5 |
-| Health potion | Q |
-| Interact / talk / loot chests | E |
-| Inventory / Character / Skills / Quests | I / C / K / J |
-| Map | M or Tab |
-| Zoom | Mouse wheel |
-| Pause menu (save, load, settings) | Esc |
-| Quick save | F5 |
+| Action | Mouse | Keyboard |
+|---|---|---|
+| Walk | Left-click / hold on the ground | W A S D |
+| Attack an enemy (walks into range, keeps attacking) | Left-click the enemy | — |
+| Talk to NPC / open chest / use door | Left-click it | E when close |
+| Pick up loot | Left-click it (or walk over it) | walk over it |
+| Heavy attack toward the cursor | Right-click | — |
+| Skills | Click the skill icons | 1 – 5 |
+| Health potion | Click the potion icon | Q |
+| Dodge | — | Space |
+| Block (Dawnwarden) | — | Shift (hold) |
+| Bag / Hero / Skills / Quests / Map / Menu | Buttons bottom-left | I / C / K / J / M / Esc |
+| Zoom | Mouse wheel | — |
+| Quick save | — | F5 |
 
 Gamepad bindings for movement, attacks, dodge, interact, potion and pause are already registered (see `systems/core/input_setup.gd`).
 
