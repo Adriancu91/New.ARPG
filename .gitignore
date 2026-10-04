@@ -1,0 +1,17 @@
+# Godot 4
+.godot/
+.import/
+*.translation
+export_presets.cfg.bak
+# Builds
+builds/
+*.exe
+*.pck
+*.zip
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+# Test artifacts
+systems/tests/output/
+*.tmp
