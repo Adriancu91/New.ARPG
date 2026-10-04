@@ -31,10 +31,10 @@
     "gloves_plate":     { "name": "Ember-Forged Gauntlets","slot": "gloves","armor": 6, "level": 4 },
     "boots_thigh":      { "name": "Thigh-High Greaves", "slot": "boots",  "armor": 4,  "level": 1 },
     "boots_runed":      { "name": "Runed Sabatons",     "slot": "boots",  "armor": 7,  "level": 4 },
-    "ring_iron":        { "name": "Iron Signet",        "slot": "ring",   "level": 1 },
-    "ring_moon":        { "name": "Moonstone Band",     "slot": "ring",   "level": 3 },
-    "amulet_bone":      { "name": "Bone Reliquary",     "slot": "amulet", "level": 1 },
-    "amulet_star":      { "name": "Starglass Pendant",  "slot": "amulet", "level": 3 }
+    "ring_iron":        { "name": "Iron Signet",        "slot": "ring",   "level": 1, "implicit": { "max_health": 8 } },
+    "ring_moon":        { "name": "Moonstone Band",     "slot": "ring",   "level": 3, "implicit": { "max_mana": 10 } },
+    "amulet_bone":      { "name": "Bone Reliquary",     "slot": "amulet", "level": 1, "implicit": { "armor": 3 } },
+    "amulet_star":      { "name": "Starglass Pendant",  "slot": "amulet", "level": 3, "implicit": { "crit_chance": 0.02 } }
   },
 
   "affixes": {

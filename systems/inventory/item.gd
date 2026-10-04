@@ -18,7 +18,8 @@ var item_level: int = 1
 var min_dmg: float = 0.0
 var max_dmg: float = 0.0
 var armor: float = 0.0
-var affixes: Dictionary = {}      # stat_id -> value
+var affixes: Dictionary = {}      # stat_id -> value (rolled)
+var implicit: Dictionary = {}     # stat_id -> value (fixed by the base, e.g. rings)
 var unique_id: String = ""
 var lore: String = ""
 var count: int = 1
@@ -75,8 +76,9 @@ func stat_block() -> Dictionary:
 		s["max_dmg"] = max_dmg
 	if armor > 0.0:
 		s["armor"] = armor
-	for k in affixes:
-		s[k] = s.get(k, 0.0) + affixes[k]
+	for src in [implicit, affixes]:
+		for k in src:
+			s[k] = s.get(k, 0.0) + src[k]
 	return s
 
 
@@ -87,8 +89,11 @@ func power_score() -> float:
 	var p := 0.0
 	p += (min_dmg + max_dmg) * 0.5 * 2.0
 	p += armor * 1.0
+	var all := implicit.duplicate()
 	for k in affixes:
-		var v: float = affixes[k]
+		all[k] = all.get(k, 0.0) + affixes[k]
+	for k in all:
+		var v: float = all[k]
 		match k:
 			"might", "agility", "spirit", "vitality": p += v * 1.6
 			"max_health": p += v * 0.35
@@ -117,7 +122,7 @@ func to_dict() -> Dictionary:
 	return {
 		"uid": uid, "base_id": base_id, "name": name, "kind": kind, "slot": slot,
 		"weapon_type": weapon_type, "rarity": rarity, "item_level": item_level,
-		"min_dmg": min_dmg, "max_dmg": max_dmg, "armor": armor, "affixes": affixes.duplicate(),
+		"min_dmg": min_dmg, "max_dmg": max_dmg, "armor": armor, "affixes": affixes.duplicate(), "implicit": implicit.duplicate(),
 		"unique_id": unique_id, "lore": lore, "count": count, "max_stack": max_stack,
 	}
 
@@ -138,6 +143,9 @@ static func from_dict(d: Dictionary) -> Item:
 	var aff: Dictionary = d.get("affixes", {})
 	for k in aff:
 		it.affixes[k] = float(aff[k])
+	var imp: Dictionary = d.get("implicit", {})
+	for k in imp:
+		it.implicit[k] = float(imp[k])
 	it.unique_id = d.get("unique_id", "")
 	it.lore = d.get("lore", "")
 	it.count = int(d.get("count", 1))

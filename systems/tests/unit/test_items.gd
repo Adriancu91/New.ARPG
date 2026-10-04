@@ -65,3 +65,14 @@ func test_item_serialization_roundtrip() -> void:
 	eq(copy.name, it.name)
 	eq(copy.power_score(), it.power_score(), "same power after roundtrip")
 	eq(copy.affixes.size(), it.affixes.size())
+
+
+func test_jewelry_has_implicit_stats() -> void:
+	var rng := RandomNumberGenerator.new()
+	for slot in ["ring", "amulet"]:
+		for i in 20:
+			var it := ItemGenerator.generate(rng, 3, "common", "", slot)
+			check(not it.implicit.is_empty(), "%s %s has implicit stats" % [slot, it.base_id])
+			check(it.power_score() > 0.0, "common jewelry is not worthless")
+			var copy := Item.from_dict(JSON.parse_string(JSON.stringify(it.to_dict())))
+			eq(JSON.stringify(copy.implicit), JSON.stringify(it.implicit), "implicit survives save")

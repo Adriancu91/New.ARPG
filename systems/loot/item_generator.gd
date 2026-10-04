@@ -89,6 +89,10 @@ static func generate(rng: RandomNumberGenerator, item_level: int, rarity: String
 		it.max_dmg = maxf(it.min_dmg + 1.0, roundf(float(base.max_dmg) * mult * rng.randf_range(0.95, 1.08)))
 	if base.has("armor"):
 		it.armor = roundf(float(base.armor) * mult * rng.randf_range(0.95, 1.1))
+	var imp: Dictionary = base.get("implicit", {})
+	for k in imp:
+		var v: float = float(imp[k]) * lvl_scale
+		it.implicit[k] = snappedf(v, 0.005) if DB.affix(k).get("percent", false) else roundf(v)
 	_roll_affixes(rng, it, int(rdef.affixes))
 	it.name = _compose_name(it, base.name)
 	return it

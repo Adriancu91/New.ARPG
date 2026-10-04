@@ -138,6 +138,8 @@ static func item_bbcode(it: Item, against: Item = null) -> String:
 			out += "[font_size=18]Damage %d - %d[/font_size]%s\n" % [it.min_dmg, it.max_dmg, _delta((it.min_dmg + it.max_dmg) * 0.5, (against.min_dmg + against.max_dmg) * 0.5 if against != null else 0.0, against != null, false)]
 		if it.armor > 0:
 			out += "[font_size=18]Armor %d[/font_size]%s\n" % [it.armor, _delta(it.armor, against.armor if against != null else 0.0, against != null, false)]
+		for k in it.implicit:
+			out += "[color=#e8dcc0]%s[/color]\n" % Item.format_stat(k, it.implicit[k])
 		for k in it.affixes:
 			out += "[color=#8fb3ff]%s[/color]\n" % Item.format_stat(k, it.affixes[k])
 		if against != null:
