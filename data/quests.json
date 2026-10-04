@@ -1,0 +1,28 @@
+{
+  "q_ashen_toll": {
+    "title": "The Ashen Toll",
+    "giver": "npc_ivenn",
+    "description": "Brother Ivenn, the last lamplighter of the Vale, begs you to thin the Hollowed that wander the ruins and to recover the scattered fragments of the Reliquary Lamp. Only the reassembled lamp can unseal the Sunken Reliquary below.",
+    "objectives": [
+      { "id": "kill_hollow", "type": "kill", "target": "hollow", "count": 5, "text": "Put down Hollowed Sentinels" },
+      { "id": "collect_fragments", "type": "collect", "target": "lamp_fragment", "count": 3, "text": "Recover Reliquary Lamp Fragments" },
+      { "id": "find_shrine", "type": "explore", "target": "area_broken_saint", "count": 1, "text": "Find the Shrine of the Broken Saint" }
+    ],
+    "turn_in": "npc_ivenn",
+    "rewards": { "xp": 260, "gold": 75, "items": ["potion_health:3"], "random_item": "rare", "unlock": "reliquary_unsealed" },
+    "next": "q_hollow_bishop"
+  },
+  "q_hollow_bishop": {
+    "title": "The Hollow Bishop",
+    "giver": "npc_ivenn",
+    "description": "The lamp burns again. Descend into the Sunken Reliquary, light the warding brazier at its heart, and end Vorthane, the bishop who swallowed the dawn.",
+    "objectives": [
+      { "id": "enter_reliquary", "type": "explore", "target": "area_reliquary_depths", "count": 1, "text": "Descend into the Sunken Reliquary" },
+      { "id": "light_brazier", "type": "interact", "target": "obj_warding_brazier", "count": 1, "text": "Light the Warding Brazier" },
+      { "id": "slay_bishop", "type": "boss", "target": "vorthane", "count": 1, "text": "Slay Vorthane, the Hollow Bishop" }
+    ],
+    "turn_in": "npc_ivenn",
+    "rewards": { "xp": 500, "gold": 200, "items": ["potion_health:5", "void_pearl:2"] },
+    "next": ""
+  }
+}

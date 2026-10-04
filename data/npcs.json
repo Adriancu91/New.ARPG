@@ -1,0 +1,66 @@
+{
+  "npc_ivenn": {
+    "name": "Brother Ivenn",
+    "title": "The Last Lamplighter",
+    "merchant": true,
+    "stock": ["potion_health", "potion_health", "potion_health"],
+    "stock_random": 4,
+    "dialogue": {
+      "start": [
+        { "if": "quest_ready:q_ashen_toll", "goto": "toll_done" },
+        { "if": "quest_active:q_ashen_toll", "goto": "toll_progress" },
+        { "if": "quest_ready:q_hollow_bishop", "goto": "bishop_done" },
+        { "if": "quest_active:q_hollow_bishop", "goto": "bishop_progress" },
+        { "if": "quest_completed:q_hollow_bishop", "goto": "epilogue" },
+        { "if": "quest_available:q_ashen_toll", "goto": "intro" },
+        { "goto": "idle" }
+      ],
+      "nodes": {
+        "intro": {
+          "text": "Another pilgrim? No... you carry yourself like the old oaths. Look around you. The Vale burned three winters ago, and the dead did not stay down. They wander these ruins still, Hollowed, wearing the armor they died in.",
+          "options": [
+            { "text": "What happened here?", "goto": "lore" },
+            { "text": "How can I help?", "goto": "offer" },
+            { "text": "Show me your wares.", "action": "trade" },
+            { "text": "Farewell.", "action": "close" }
+          ]
+        },
+        "lore": {
+          "text": "Bishop Vorthane sealed himself inside the Reliquary to pray away the plague of ash. Something answered him. When the seal cracked, the Lamp that guarded it shattered into pieces and the Hollowed poured out. I keep the last flame lit. That is all an old man can do.",
+          "options": [ { "text": "How can I help?", "goto": "offer" }, { "text": "Farewell.", "action": "close" } ]
+        },
+        "offer": {
+          "text": "Put down five of the Hollowed Sentinels so their souls can rest. Gather three fragments of the Reliquary Lamp; the cultists hoard them and some lie in the ruins. And find the Shrine of the Broken Saint to the east; the lamp must be rekindled with her memory.",
+          "options": [
+            { "text": "I will do it. [Accept quest]", "action": "accept:q_ashen_toll" },
+            { "text": "Not yet.", "action": "close" }
+          ]
+        },
+        "toll_progress": {
+          "text": "The Hollowed still walk. Five Sentinels, three Lamp fragments, and the Shrine of the Broken Saint. Do not die out there, I am running out of oil for the funeral lamps.",
+          "options": [ { "text": "Show me your wares.", "action": "trade" }, { "text": "I'm on my way.", "action": "close" } ]
+        },
+        "toll_done": {
+          "text": "The fragments... they are warm. You have done what no one else could. Here, take this, and listen: with the lamp whole, the seal on the Reliquary will open for you. But Vorthane waits below.",
+          "options": [ { "text": "Then I go to meet him. [Complete quest]", "action": "complete:q_ashen_toll" } ]
+        },
+        "bishop_progress": {
+          "text": "The Reliquary lies past the old bridge, to the north-east. Light the warding brazier at its heart before you face him, or his darkness will swallow you as it swallowed the dawn.",
+          "options": [ { "text": "Show me your wares.", "action": "trade" }, { "text": "I'm going.", "action": "close" } ]
+        },
+        "bishop_done": {
+          "text": "I felt it. The ground stopped weeping. You ended him. The Vale owes you its first quiet night in three years. Take what little the Order left behind.",
+          "options": [ { "text": "Rest now, Brother. [Complete quest]", "action": "complete:q_hollow_bishop" } ]
+        },
+        "epilogue": {
+          "text": "Dawn returns slowly here. But it returns. Beyond the eastern pass lie lands that still burn. When you are ready, the road waits.",
+          "options": [ { "text": "Show me your wares.", "action": "trade" }, { "text": "Farewell.", "action": "close" } ]
+        },
+        "idle": {
+          "text": "Keep your blade close and your lamp closer.",
+          "options": [ { "text": "Show me your wares.", "action": "trade" }, { "text": "Farewell.", "action": "close" } ]
+        }
+      }
+    }
+  }
+}

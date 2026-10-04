@@ -1,0 +1,83 @@
+{
+  "rarities": {
+    "common":    { "name": "Common",    "color": "#c8c4bc", "affixes": 0, "stat_mult": 1.00, "weight": 60, "power": 1.0 },
+    "uncommon":  { "name": "Uncommon",  "color": "#5fd36b", "affixes": 1, "stat_mult": 1.10, "weight": 26, "power": 1.2 },
+    "rare":      { "name": "Rare",      "color": "#4f9bff", "affixes": 2, "stat_mult": 1.22, "weight": 10, "power": 1.45 },
+    "epic":      { "name": "Epic",      "color": "#b45cff", "affixes": 3, "stat_mult": 1.35, "weight": 3.4, "power": 1.75 },
+    "legendary": { "name": "Legendary", "color": "#ff9a2e", "affixes": 4, "stat_mult": 1.55, "weight": 0.6, "power": 2.2 }
+  },
+  "slots": ["weapon", "helmet", "armor", "gloves", "boots", "ring", "amulet"],
+  "equip_slots": ["weapon", "helmet", "armor", "gloves", "boots", "ring1", "ring2", "amulet"],
+
+  "bases": {
+    "oathblade_worn":   { "name": "Worn Oathblade",     "slot": "weapon", "weapon_type": "sword",       "min_dmg": 8,  "max_dmg": 12, "level": 1, "starter": true },
+    "twinfangs_rusted": { "name": "Rusted Twinfangs",   "slot": "weapon", "weapon_type": "dual_blades", "min_dmg": 6,  "max_dmg": 10, "level": 1, "starter": true },
+    "longbow_ashwood":  { "name": "Ashwood Longbow",    "slot": "weapon", "weapon_type": "bow",         "min_dmg": 7,  "max_dmg": 12, "level": 1, "starter": true },
+    "vestment_pilgrim": { "name": "Pilgrim's Vestment", "slot": "armor",  "armor": 6,  "level": 1, "starter": true },
+    "boots_pilgrim":    { "name": "Pilgrim's Boots",    "slot": "boots",  "armor": 2,  "level": 1, "starter": true },
+
+    "sword_vigil":      { "name": "Vigil Longsword",    "slot": "weapon", "weapon_type": "sword",       "min_dmg": 10, "max_dmg": 15, "level": 1 },
+    "sword_cathedral":  { "name": "Cathedral Blade",    "slot": "weapon", "weapon_type": "sword",       "min_dmg": 14, "max_dmg": 21, "level": 4 },
+    "blades_gutter":    { "name": "Gutterfang Blades",  "slot": "weapon", "weapon_type": "dual_blades", "min_dmg": 8,  "max_dmg": 13, "level": 1 },
+    "blades_widow":     { "name": "Widowmaker Pair",    "slot": "weapon", "weapon_type": "dual_blades", "min_dmg": 11, "max_dmg": 18, "level": 4 },
+    "bow_hunter":       { "name": "Thornwood Bow",      "slot": "weapon", "weapon_type": "bow",         "min_dmg": 9,  "max_dmg": 14, "level": 1 },
+    "bow_moonhorn":     { "name": "Moonhorn Recurve",   "slot": "weapon", "weapon_type": "bow",         "min_dmg": 13, "max_dmg": 20, "level": 4 },
+
+    "helm_circlet":     { "name": "Silver Circlet",     "slot": "helmet", "armor": 4,  "level": 1 },
+    "helm_crowned":     { "name": "Crowned Visor",      "slot": "helmet", "armor": 8,  "level": 4 },
+    "armor_corset":     { "name": "Lacquered Cuirass",  "slot": "armor",  "armor": 10, "level": 1 },
+    "armor_scale":      { "name": "Gilded Scale Harness","slot": "armor", "armor": 16, "level": 4 },
+    "gloves_leather":   { "name": "Oiled Gauntlets",    "slot": "gloves", "armor": 3,  "level": 1 },
+    "gloves_plate":     { "name": "Ember-Forged Gauntlets","slot": "gloves","armor": 6, "level": 4 },
+    "boots_thigh":      { "name": "Thigh-High Greaves", "slot": "boots",  "armor": 4,  "level": 1 },
+    "boots_runed":      { "name": "Runed Sabatons",     "slot": "boots",  "armor": 7,  "level": 4 },
+    "ring_iron":        { "name": "Iron Signet",        "slot": "ring",   "level": 1 },
+    "ring_moon":        { "name": "Moonstone Band",     "slot": "ring",   "level": 3 },
+    "amulet_bone":      { "name": "Bone Reliquary",     "slot": "amulet", "level": 1 },
+    "amulet_star":      { "name": "Starglass Pendant",  "slot": "amulet", "level": 3 }
+  },
+
+  "affixes": {
+    "might":         { "name": "of Might",       "label": "Might",            "min": 2,    "max": 4,    "per_level": 0.6,  "slots": ["weapon","helmet","armor","gloves","boots","ring","amulet"] },
+    "agility":       { "name": "of the Fox",     "label": "Agility",          "min": 2,    "max": 4,    "per_level": 0.6,  "slots": ["weapon","helmet","armor","gloves","boots","ring","amulet"] },
+    "spirit":        { "name": "of Embers",      "label": "Spirit",           "min": 2,    "max": 4,    "per_level": 0.6,  "slots": ["weapon","helmet","armor","gloves","ring","amulet"] },
+    "vitality":      { "name": "of the Bear",    "label": "Vitality",         "min": 2,    "max": 4,    "per_level": 0.6,  "slots": ["helmet","armor","gloves","boots","ring","amulet"] },
+    "max_health":    { "name": "Stalwart",       "label": "Maximum Health",   "min": 8,    "max": 16,   "per_level": 3.0,  "slots": ["helmet","armor","boots","amulet"] },
+    "max_mana":      { "name": "Glowing",        "label": "Maximum Resource", "min": 5,    "max": 10,   "per_level": 1.5,  "slots": ["helmet","ring","amulet"] },
+    "armor":         { "name": "Warded",         "label": "Armor",            "min": 3,    "max": 6,    "per_level": 1.0,  "slots": ["helmet","armor","gloves","boots"] },
+    "crit_chance":   { "name": "Keen",           "label": "Critical Chance",  "min": 0.02, "max": 0.04, "per_level": 0.002,"slots": ["weapon","gloves","ring","amulet"], "percent": true },
+    "attack_speed":  { "name": "Swift",          "label": "Attack Speed",     "min": 0.04, "max": 0.08, "per_level": 0.003,"slots": ["weapon","gloves","ring"], "percent": true },
+    "move_speed":    { "name": "Wandering",      "label": "Movement Speed",   "min": 0.04, "max": 0.08, "per_level": 0.002,"slots": ["boots"], "percent": true },
+    "damage_pct":    { "name": "Cruel",          "label": "Damage",           "min": 0.06, "max": 0.12, "per_level": 0.005,"slots": ["weapon","ring","amulet"], "percent": true },
+    "fire_damage":   { "name": "Smouldering",    "label": "Fire Damage",      "min": 2,    "max": 5,    "per_level": 1.0,  "slots": ["weapon","gloves","ring"] },
+    "life_on_hit":   { "name": "Leeching",       "label": "Life on Hit",      "min": 1,    "max": 3,    "per_level": 0.4,  "slots": ["weapon","gloves","amulet"] }
+  },
+
+  "uniques": {
+    "dawnbreaker": { "name": "Dawnbreaker, Oath of Vorthane's Ruin", "base": "sword_cathedral", "rarity": "legendary",
+      "fixed": { "might": 8, "crit_chance": 0.06, "damage_pct": 0.25, "life_on_hit": 4 },
+      "lore": "Pulled from the Hollow Bishop's ribs. It still hums the hymn he forgot." },
+    "hollow_mitre": { "name": "The Hollow Mitre", "base": "helm_crowned", "rarity": "legendary",
+      "fixed": { "spirit": 8, "max_mana": 25, "max_health": 30, "armor": 8 },
+      "lore": "A bishop's crown, emptied of the bishop." },
+    "ashen_requiem": { "name": "Ashen Requiem", "base": "blades_widow", "rarity": "legendary",
+      "fixed": { "agility": 8, "attack_speed": 0.15, "fire_damage": 8, "crit_chance": 0.05 },
+      "lore": "Two blades forged from the bells of the Reliquary." },
+    "vigil_of_stars": { "name": "Vigil of Stars", "base": "bow_moonhorn", "rarity": "legendary",
+      "fixed": { "agility": 8, "spirit": 5, "damage_pct": 0.25, "crit_chance": 0.05 },
+      "lore": "Its string was spun from the light that Vorthane swallowed." }
+  },
+  "boss_uniques": { "dawnwarden": "dawnbreaker", "hellbrand": "ashen_requiem", "starweaver": "vigil_of_stars", "any": "hollow_mitre" },
+
+  "consumables": {
+    "potion_health": { "name": "Crimson Tincture", "desc": "Restores 40% of maximum health.", "stack": 20, "heal_pct": 0.4, "price": 15, "color": "#c0303a" }
+  },
+  "materials": {
+    "ash_shard":   { "name": "Ash Shard",   "desc": "Crafting material. Brittle remains of corrupted armor.", "stack": 99, "price": 2, "color": "#9a9a9a" },
+    "ember_dust":  { "name": "Ember Dust",  "desc": "Crafting material. Still warm.",                         "stack": 99, "price": 4, "color": "#e07a2e" },
+    "void_pearl":  { "name": "Void Pearl",  "desc": "Rare crafting material. Reflects nothing.",              "stack": 99, "price": 25, "color": "#7a5cff" }
+  },
+  "quest_items": {
+    "lamp_fragment": { "name": "Reliquary Lamp Fragment", "desc": "A shard of the lamp that once sealed the Reliquary.", "stack": 10, "color": "#ffd77a" }
+  }
+}

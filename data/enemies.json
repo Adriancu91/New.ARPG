@@ -1,0 +1,39 @@
+{
+  "hollow_sentinel": {
+    "name": "Hollowed Sentinel", "archetype": "corrupted_warrior", "tags": ["corrupted", "hollow", "humanoid"],
+    "health": 60, "damage": 9, "armor": 6, "speed": 3.6, "detect": 13.0, "attack_range": 2.2, "attack_windup": 0.55,
+    "attack_cooldown": 1.5, "attack_type": "melee", "xp": 25, "gold": [3, 9], "loot_chance": 0.32,
+    "scale": 1.0, "color": "#5b5560", "glow": "#9b7cff", "knockback_resist": 0.0
+  },
+  "gloomfang": {
+    "name": "Gloomfang", "archetype": "beast", "tags": ["beast", "corrupted"],
+    "health": 34, "damage": 6, "armor": 1, "speed": 6.4, "detect": 16.0, "attack_range": 1.8, "attack_windup": 0.32,
+    "attack_cooldown": 0.95, "attack_type": "melee", "xp": 15, "gold": [1, 5], "loot_chance": 0.18,
+    "scale": 0.9, "color": "#2b2a2e", "glow": "#e04b4b", "knockback_resist": 0.0
+  },
+  "ashen_cultist": {
+    "name": "Ashen Cultist", "archetype": "ranged_caster", "tags": ["corrupted", "humanoid", "caster"],
+    "health": 40, "damage": 10, "armor": 2, "speed": 3.4, "detect": 18.0, "attack_range": 13.0, "preferred_range": 9.0,
+    "attack_windup": 0.7, "attack_cooldown": 2.2, "attack_type": "projectile", "projectile_speed": 13.0, "element": "shadow",
+    "xp": 30, "gold": [4, 11], "loot_chance": 0.38,
+    "scale": 1.0, "color": "#3d2a2a", "glow": "#ff6a3a", "knockback_resist": 0.0
+  },
+  "veilstalker": {
+    "name": "Veilstalker", "archetype": "assassin", "tags": ["corrupted", "assassin"],
+    "health": 38, "damage": 15, "armor": 2, "speed": 5.2, "detect": 15.0, "attack_range": 7.0, "attack_windup": 0.45,
+    "attack_cooldown": 2.6, "attack_type": "lunge", "lunge_speed": 22.0, "xp": 35, "gold": [5, 12], "loot_chance": 0.4,
+    "scale": 0.95, "color": "#18161e", "glow": "#5ad1ff", "knockback_resist": 0.0
+  },
+  "cinder_colossus": {
+    "name": "Cinder Colossus", "archetype": "heavy", "tags": ["corrupted", "construct", "heavy"],
+    "health": 210, "damage": 22, "armor": 20, "speed": 2.5, "detect": 12.0, "attack_range": 3.6, "attack_windup": 1.1,
+    "attack_cooldown": 2.8, "attack_type": "slam", "slam_radius": 4.0, "element": "fire", "xp": 80, "gold": [12, 30], "loot_chance": 0.85,
+    "scale": 1.75, "color": "#3a2f2a", "glow": "#ff8a2a", "knockback_resist": 0.85
+  },
+  "vorthane": {
+    "name": "Vorthane, the Hollow Bishop", "archetype": "boss", "tags": ["corrupted", "boss", "humanoid"],
+    "health": 1900, "damage": 24, "armor": 18, "speed": 3.2, "detect": 30.0, "attack_range": 5.0,
+    "xp": 600, "gold": [150, 220], "loot_chance": 1.0,
+    "scale": 2.6, "color": "#2a2228", "glow": "#d64a6a", "knockback_resist": 1.0
+  }
+}
