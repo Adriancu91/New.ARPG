@@ -198,3 +198,12 @@ func _music_boss(t: float, d: float) -> float:
 	v += sin(TAU * 50.0 * t) * 0.5 * exp(-beat * 14.0)
 	v += _noise() * 0.12 * exp(-fmod(t + 0.25, 0.5) * 30.0)
 	return v
+
+
+func _exit_tree() -> void:
+	# stop playback before shutdown so no stream playbacks outlive the engine
+	for p in _pool + [music_player, ambience_player]:
+		if is_instance_valid(p):
+			p.stop()
+			p.stream = null
+	streams.clear()

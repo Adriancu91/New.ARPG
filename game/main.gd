@@ -400,6 +400,16 @@ func quit_game() -> void:
 	get_tree().quit()
 
 
+func _exit_tree() -> void:
+	# release static caches so the engine shuts down without leaked objects
+	ModelKit._mesh_cache.clear()
+	Props._mats.clear()
+	Icons._cache.clear()
+	Enemy._tex_cache.clear()
+	FloatingText._pool.clear()
+	UITheme._theme = null
+
+
 # ---------------------------------------------------------------- death
 
 func _on_player_died() -> void:

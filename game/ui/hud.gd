@@ -58,6 +58,7 @@ func _ready() -> void:
 
 func bind_player(p: Player) -> void:
 	player = p
+	res_bar.add_theme_stylebox_override("fill", T.fill_style(Color(p.data.class_data().resource_color)))
 	_rebuild_skill_bar()
 	_refresh_quests()
 	boss_panel.visible = false
@@ -306,7 +307,6 @@ func _process(delta: float) -> void:
 	var cls := cd.class_data()
 	res_bar.max_value = player.max_mana
 	res_bar.value = player.mana
-	res_bar.add_theme_stylebox_override("fill", T.fill_style(Color(cls.resource_color)))
 	res_label.text = "%s %d / %d" % [cls.resource_name, floori(player.mana), roundi(player.max_mana)]
 	stam_bar.max_value = player.max_stamina
 	stam_bar.value = player.stamina
