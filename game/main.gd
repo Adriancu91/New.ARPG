@@ -76,6 +76,17 @@ func _ready() -> void:
 	Game.zone_change_requested.connect(func(z, s): change_zone(z, s))
 	Events.game_saved.connect(_on_game_saved)
 	show_main_menu()
+	_maybe_attach_probe()
+
+
+## Test hook: `-- --state-file=<path>` attaches the state probe used by the
+## real-input test driver (tools/real_input_test.py). Absent in normal play.
+func _maybe_attach_probe() -> void:
+	for a in OS.get_cmdline_user_args():
+		if a.begins_with("--state-file=") and ResourceLoader.exists("res://systems/tests/state_probe.gd"):
+			var probe: Node = load("res://systems/tests/state_probe.gd").new()
+			probe.path = a.substr(13)
+			add_child(probe)
 
 
 func _build_map_overlay() -> void:
@@ -358,6 +369,20 @@ func _unhandled_input(ev: InputEvent) -> void:
 		map_overlay.visible = not map_overlay.visible
 	elif ev.is_action_pressed("quick_save"):
 		manual_save()
+
+
+## Called by the HUD buttons (mouse) and mirrors the keyboard shortcuts.
+func toggle_panel(id: String) -> void:
+	if not playing or get_tree().paused and id != "menu":
+		return
+	Audio.play("ui_click")
+	match id:
+		"inventory": inventory_ui.toggle()
+		"character": character_ui.toggle()
+		"skills": skills_ui.toggle()
+		"quests": quest_ui.toggle()
+		"map": map_overlay.visible = not map_overlay.visible
+		"menu": set_paused(not get_tree().paused)
 
 
 func _any_window_open() -> bool:

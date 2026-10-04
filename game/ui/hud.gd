@@ -41,6 +41,7 @@ func _init() -> void:
 func _ready() -> void:
 	_build_vitals()
 	_build_top_left()
+	_build_menu_bar()
 	_build_minimap()
 	_build_notifications()
 	_build_boss_bar()
@@ -159,7 +160,15 @@ func _rebuild_skill_bar() -> void:
 		slot.tooltip_text = "%s\n%s" % [DB.get_skill(bar[i]).name, DB.get_skill(bar[i]).desc]
 		row.add_child(slot)
 		skill_slots.append(slot)
+	for slot in skill_slots:
+		var sid_c: String = slot.get_meta("skill")
+		slot.gui_input.connect(func(ev):
+			if ev is InputEventMouseButton and ev.pressed and ev.button_index == MOUSE_BUTTON_LEFT and player:
+				player.cast_from_ui(sid_c))
 	var potion := _make_slot("Q", Icons.for_item(Item.make_stack("potion_health")))
+	potion.gui_input.connect(func(ev):
+		if ev is InputEventMouseButton and ev.pressed and ev.button_index == MOUSE_BUTTON_LEFT and player:
+			player.try_potion())
 	potion.tooltip_text = "Crimson Tincture - restores 40% health"
 	row.add_child(potion)
 	potion_label = potion.get_node("Count")
@@ -201,6 +210,31 @@ func _make_slot(key: String, icon: Texture2D) -> Control:
 	return slot
 
 
+func _build_menu_bar() -> void:
+	var bar := GridContainer.new()
+	bar.columns = 3
+	bar.set_anchors_preset(Control.PRESET_BOTTOM_LEFT)
+	bar.anchor_left = 0.0
+	bar.anchor_right = 0.0
+	bar.anchor_top = 1.0
+	bar.anchor_bottom = 1.0
+	bar.offset_left = 14
+	bar.offset_right = 380
+	bar.offset_top = -96
+	bar.offset_bottom = -12
+	bar.add_theme_constant_override("h_separation", 4)
+	bar.add_theme_constant_override("v_separation", 4)
+	add_child(bar)
+	for entry in [["Bag (I)", "inventory"], ["Hero (C)", "character"], ["Skills (K)", "skills"], ["Quests (J)", "quests"], ["Map (M)", "map"], ["Menu (Esc)", "menu"]]:
+		var id: String = entry[1]
+		var b := T.button(entry[0], func():
+			if Game.main:
+				Game.main.toggle_panel(id))
+		b.add_theme_font_size_override("font_size", 14)
+		b.custom_minimum_size = Vector2(118, 0)
+		bar.add_child(b)
+
+
 func _build_top_left() -> void:
 	var p := _panel()
 	p.position = Vector2(14, 14)
@@ -213,7 +247,7 @@ func _build_top_left() -> void:
 	v.add_child(gold_label)
 	points_label = T.label("", 14, Color(0.6, 1.0, 0.6))
 	v.add_child(points_label)
-	var help := T.label("I Inventory  C Character  K Skills  J Quests  M Map  Esc Menu", 12, T.TEXT_DIM)
+	var help := T.label("Left-click: walk / attack / talk / loot   Right-click: heavy attack\n1-5 skills (or click them)   Space dodge   Q potion   E use", 12, T.TEXT_DIM)
 	v.add_child(help)
 
 
@@ -345,7 +379,7 @@ func _process(delta: float) -> void:
 	if potion_label:
 		potion_label.text = str(cd.inventory.count_of("potion_health"))
 	var it := player.nearest_interactable()
-	prompt_label.text = "[E] " + it.get_prompt() if it != null else ""
+	prompt_label.text = "[E / click] " + it.get_prompt() if it != null else ""
 	var st: Array = []
 	for id in player.status.names():
 		st.append(StatusEffects.DEFS[id].name)

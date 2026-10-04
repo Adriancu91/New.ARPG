@@ -50,19 +50,22 @@ func _init() -> void:
 
 
 static func setup() -> void:
-	for action in KEY_ACTIONS:
+	# Reset every action ONCE, then add keyboard, mouse and gamepad events.
+	# (Previously each section reset the action again, so the gamepad pass
+	# wiped the keyboard/mouse bindings of attack, skills, E, I, Esc...)
+	var all_actions: Array = KEY_ACTIONS.keys() + MOUSE_ACTIONS.keys() + JOY_BUTTONS.keys()
+	for action in all_actions:
 		_ensure(action)
+	for action in KEY_ACTIONS:
 		for key in KEY_ACTIONS[action]:
 			var ev := InputEventKey.new()
 			ev.physical_keycode = key
 			InputMap.action_add_event(action, ev)
 	for action in MOUSE_ACTIONS:
-		_ensure(action)
 		var mev := InputEventMouseButton.new()
 		mev.button_index = MOUSE_ACTIONS[action]
 		InputMap.action_add_event(action, mev)
 	for action in JOY_BUTTONS:
-		_ensure(action)
 		var jev := InputEventJoypadButton.new()
 		jev.button_index = JOY_BUTTONS[action]
 		InputMap.action_add_event(action, jev)

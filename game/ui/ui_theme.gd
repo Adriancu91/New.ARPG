@@ -100,6 +100,7 @@ static func title(text: String, size: int = 26) -> Label:
 static func button(text: String, cb: Callable, min_w: float = 0.0) -> Button:
 	var b := Button.new()
 	b.text = text
+	b.focus_mode = Control.FOCUS_NONE   # Space/Enter must never re-press a UI button during play
 	b.custom_minimum_size.x = min_w
 	b.pressed.connect(func():
 		Audio.play("ui_click")
