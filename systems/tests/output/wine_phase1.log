@@ -1,11 +1,11 @@
 Godot Engine v4.3.stable.official.77dcf97d8 - https://godotengine.org
 
-[sim    0.2s | wall   0.3s] Main menu visible=true, New Game available=true
-[sim    0.8s | wall   0.6s] PASS  VS-001  Game Launch  -- Main menu shown on boot with New Game enabled; gameplay reached (zone 'vale_of_cinders' loaded, player spawned).
-[sim    0.8s | wall   0.6s] PASS  VS-002  Character Selection  -- Selected Dawnwarden -> Seraphine Vael (Dawnwarden), Lv 1, HP 204/204, Radiance 90, weapon 'Worn Oathblade', zone vale_of_cinders.
-[sim    8.6s | wall   1.9s] PASS  VS-003  Movement  -- WASD input actions: velocity after 1 frame(s); walked 19.4 m south and was stopped by the boundary wall at z=63.40 (wall 66.0); moved back north/left/right freely; camera focus offset 0.00 m while moving, 0.11 m at rest.
-[sim   12.3s | wall   2.7s] PASS  VS-014  Quest Start  -- Pressed E near Brother Ivenn -> dialogue 'intro' -> 'offer' -> accepted. State=active. Quest log lists 'The Ashen Toll'; HUD tracker: Quests | The Ashen Toll |   - Put down Hollowed Sentinels (0/5) |   - Recover Reliquary Lamp Fragments (0/3) |   - Find the Shrine of the Broken Saint | 
-[sim   12.5s | wall   2.7s] Merchant opened=true, bought potion=false (gold 10 -> 10, potions 3 -> 3)
+[sim    0.2s | wall   0.2s] Main menu visible=true, New Game available=true
+[sim    0.8s | wall   0.4s] PASS  VS-001  Game Launch  -- Main menu shown on boot with New Game enabled; gameplay reached (zone 'vale_of_cinders' loaded, player spawned).
+[sim    0.8s | wall   0.4s] PASS  VS-002  Character Selection  -- Selected Dawnwarden -> Seraphine Vael (Dawnwarden), Lv 1, HP 204/204, Radiance 90, weapon 'Worn Oathblade', zone vale_of_cinders.
+[sim    8.6s | wall   1.7s] PASS  VS-003  Movement  -- WASD input actions: velocity after 1 frame(s); walked 19.4 m south and was stopped by the boundary wall at z=63.40 (wall 66.0); moved back north/left/right freely; camera focus offset 0.00 m while moving, 0.11 m at rest.
+[sim   12.3s | wall   2.4s] PASS  VS-014  Quest Start  -- Pressed E near Brother Ivenn -> dialogue 'intro' -> 'offer' -> accepted. State=active. Quest log lists 'The Ashen Toll'; HUD tracker: Quests | The Ashen Toll |   - Put down Hollowed Sentinels (0/5) |   - Recover Reliquary Lamp Fragments (0/3) |   - Find the Shrine of the Broken Saint | 
+[sim   12.5s | wall   2.4s] Merchant opened=true, bought potion=false (gold 10 -> 10, potions 3 -> 3)
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
@@ -44,20 +44,20 @@ ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-[sim   21.8s | wall   4.2s] PASS  VS-007  Enemy AI  -- Sentinel idle while player was 15 m away (aggro=false); detected the player at 6.8 m (detect radius 13), closed from 6.9 m to 2.2 m, telegraphed and landed 2 hit(s) (HP 204 -> 177); AI states observed: ["CHASE", "WINDUP", "RECOVER"]; it was then killed (died=true). Hit detail: ["dist 2.2 state WINDUP frame 1078 kb 5.0", "dist 0.1 state WINDUP frame 1202 kb 5.0"]
-[sim   21.8s | wall   4.2s] PASS  VS-004  Basic Combat  -- Killed a Hollowed Sentinel with basic attacks (LMB action) only: 6 hits landed, health 60 -> 0, 5 floating damage numbers present, hit flash + knockback applied.
-[sim   21.8s | wall   4.2s] PASS  VS-008  XP  -- Killing the sentinel awarded 25 XP (expected 25 from data: base 25, enemy Lv 1 vs player Lv 1); total XP 0 -> 25; HUD XP bar shows 25 == character XP 25.
+[sim   21.8s | wall   3.9s] PASS  VS-007  Enemy AI  -- Sentinel idle while player was 15 m away (aggro=false); detected the player at 7.9 m (detect radius 13), closed from 7.9 m to 2.2 m, telegraphed and landed 2 hit(s) (HP 204 -> 170); AI states observed: ["CHASE", "WINDUP", "RECOVER"]; it was then killed (died=true). Hit detail: ["dist 2.4 state WINDUP frame 1113 kb 5.0", "dist 0.6 state WINDUP frame 1237 kb 5.0"]
+[sim   21.8s | wall   3.9s] PASS  VS-004  Basic Combat  -- Killed a Hollowed Sentinel with basic attacks (LMB action) only: 5 hits landed, health 60 -> 0, 8 floating damage numbers present, hit flash + knockback applied.
+[sim   21.8s | wall   3.9s] PASS  VS-008  XP  -- Killing the sentinel awarded 25 XP (expected 25 from data: base 25, enemy Lv 1 vs player Lv 1); total XP 0 -> 25; HUD XP bar shows 25 == character XP 25.
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-[sim   22.4s | wall   4.3s] PASS  VS-005  Skill  -- Key 1 cast Radiant Cleave (Light cone): [27] skill damage to the target, resource 90.0 -> 78.0 (cost 12, minus regen), cooldown 2.50s started and blocked immediate re-use; key 2 cast Aegis of Dawn (damage-reduction buff active=true).
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
+[sim   22.4s | wall   4.0s] PASS  VS-005  Skill  -- Key 1 cast Radiant Cleave (Light cone): [31] skill damage to the target, resource 90.0 -> 78.0 (cost 12, minus regen), cooldown 2.50s started and blocked immediate re-use; key 2 cast Aegis of Dawn (damage-reduction buff active=true).
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
@@ -78,6 +78,7 @@ ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
+[sim   32.2s | wall   5.4s] PASS  VS-006  Dodge  -- Space: dodge moved 5.77 m in 0.32s, i-frames 0.22s then ended, 22 stamina spent, instant re-dodge refused. Spamming dodge for 6 s kept the player invulnerable only 24% of frames (cooldown + stamina gate).
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
@@ -86,7 +87,6 @@ ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-[sim   31.1s | wall   5.7s] PASS  VS-006  Dodge  -- Space: dodge moved 5.77 m in 0.32s, i-frames 0.22s then ended, 22 stamina spent, instant re-dodge refused. Spamming dodge for 6 s kept the player invulnerable only 24% of frames (cooldown + stamina gate).
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
@@ -111,6 +111,7 @@ ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
+[sim   41.6s | wall   6.6s] PASS  VS-009  Level Up  -- Kill granting 25 XP took the hero from 95 XP (Lv 1, threshold 100) to Lv 2 with 20 XP carried over; 'LEVEL 2' banner shown=true; attribute points 0 -> 5, skill points 0 -> 1; max health 204 -> 213; health refilled=true.
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
@@ -121,6 +122,8 @@ ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
+[sim   84.2s | wall  11.5s] bot: giving up on unreachable veilstalker at (17, 0, -26)
+[sim  116.0s | wall  14.9s] bot: giving up on unreachable veilstalker at (29, 0, -29)
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
@@ -129,6 +132,10 @@ ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
+[sim  126.7s | wall  16.1s] PASS  VS-010  Loot  -- Enemy drop 'Vigil Longsword' [common, base sword_vigil, ilvl 2] from enemy:veilstalker: pickup showed rarity beam + name label, walked over it -> in inventory. Total pickups collected in this fight: 4 (1 equipment).
+[sim  157.8s | wall  19.6s] PASS  VS-011  Inventory  -- Pressed I: window open=true, 6 bag items shown in the grid with icons; selecting the looted item shows: "Vigil Longsword / Common Weapon - Sword   Item level 2 / Damage 12 - 16  ▲ +1.5 /  / Power 28  ▲ +3.0 (better)"
+[sim  157.8s | wall  19.6s] PASS  VS-012  Equipment  -- Equipped 'Vigil Longsword' into weapon via inventory right-click. 'Vigil Longsword' returned to the bag (bag size unchanged). Damage 13-20 -> 16-22, armor 10 -> 10, max health 228 -> 228; live player stats updated=true; duplicate uids=false.
+[sim  157.9s | wall  19.6s] PASS  VS-013  Item Comparison  -- Selected 'Vigil Longsword' in the bag while wearing 'Vigil Longsword': the selected panel shows per-stat deltas and a verdict ("Vigil Longsword / Common Weapon - Sword   Item level 1 / Damage 10 - 15  ▼ -1.5 /  / Power 25  ▼ -3.0 (worse)"); the 'Currently equipped' panel shows 'Vigil Longsword'.
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
@@ -163,77 +170,12 @@ ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-[sim   43.9s | wall   7.6s] PASS  VS-009  Level Up  -- Kill granting 20 XP took the hero from 95 XP (Lv 1, threshold 100) to Lv 2 with 15 XP carried over; 'LEVEL 2' banner shown=true; attribute points 0 -> 5, skill points 0 -> 1; max health 204 -> 213; health refilled=true.
-[sim   91.7s | wall  13.2s] bot: giving up on unreachable veilstalker at (18, 0, -25)
-[sim  123.4s | wall  17.0s] bot: giving up on unreachable veilstalker at (25, 0, -30)
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-[sim  134.4s | wall  18.3s] PASS  VS-010  Loot  -- Enemy drop 'Vigil Longsword' [common, base sword_vigil, ilvl 2] from enemy:veilstalker: pickup showed rarity beam + name label, walked over it -> in inventory. Total pickups collected in this fight: 4 (1 equipment).
-[sim  165.5s | wall  21.8s] PASS  VS-011  Inventory  -- Pressed I: window open=true, 5 bag items shown in the grid with icons; selecting the looted item shows: "Vigil Longsword / Common Weapon - Sword   Item level 2 / Damage 12 - 16  ▲ +4.0 /  / Power 28  ▲ +8.0 (better)"
-[sim  165.6s | wall  21.8s] PASS  VS-012  Equipment  -- Equipped 'Vigil Longsword' into weapon via inventory right-click. 'Worn Oathblade' returned to the bag (bag size unchanged). Damage 11-16 -> 16-22, armor 11 -> 11, max health 236 -> 236; live player stats updated=true; duplicate uids=false.
-[sim  165.6s | wall  21.8s] PASS  VS-013  Item Comparison  -- Selected 'Worn Oathblade' in the bag while wearing 'Vigil Longsword': the selected panel shows per-stat deltas and a verdict ("Worn Oathblade / Common Weapon - Sword   Item level 1 / Damage 8 - 12  ▼ -4.0 /  / Power 20  ▼ -8.0 (worse)"); the 'Currently equipped' panel shows 'Vigil Longsword'.
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-[sim  222.7s | wall  27.5s] PASS  VS-015  Quest Progression  -- Objectives advanced by gameplay: kills 5/5, kills 5/5, shrine explored=true, fragments 3/3, fragments 4/3. Mid-quest save contained the live kill count=true. State now 'ready'.
-[sim  236.8s | wall  28.7s] PASS  VS-016  Quest Completion  -- Turned in at Ivenn (node 'toll_done'): +260 XP (Lv 3 -> 3), +75 gold, potions 7 -> 10, random rare item granted (bag 8 -> 8 items), fragments consumed; second completion attempt returned false with no extra gold; Reliquary unsealed; follow-up quest active; completion + rewarded flag present in save=true.
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
+[sim  226.1s | wall  26.2s] PASS  VS-015  Quest Progression  -- Objectives advanced by gameplay: kills 5/5, kills 5/5, shrine explored=true, fragments 3/3, fragments 4/3. Mid-quest save contained the live kill count=true. State now 'ready'.
+[sim  240.2s | wall  27.3s] PASS  VS-016  Quest Completion  -- Turned in at Ivenn (node 'toll_done'): +260 XP (Lv 3 -> 3), +75 gold, potions 7 -> 10, random rare item granted (bag 10 -> 10 items), fragments consumed; second completion attempt returned false with no extra gold; Reliquary unsealed; follow-up quest active; completion + rewarded flag present in save=true.
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
@@ -348,7 +290,7 @@ ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-[sim  277.3s | wall  32.4s] PASS  VS-017  Dungeon  -- Gate open after quest=true; pressed E -> zone 'sunken_reliquary' loaded, player at entrance with HP 288/288, 13 enemies + boss spawned; 'Descend' objective updated=true.
+[sim  274.1s | wall  30.1s] PASS  VS-017  Dungeon  -- Gate open after quest=true; pressed E -> zone 'sunken_reliquary' loaded, player at entrance with HP 309/309, 13 enemies + boss spawned; 'Descend' objective updated=true.
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
@@ -411,7 +353,6 @@ ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-[sim  318.0s | wall  34.6s] Brazier lit=true, door closed before=true, open after=true, player Lv 4 HP 280/280, potions 13
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
@@ -426,6 +367,7 @@ ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
+[sim  314.1s | wall  32.0s] Brazier lit=true, door closed before=true, open after=true, player Lv 4 HP 289/289, potions 15
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
@@ -578,22 +520,22 @@ ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
+[sim  356.7s | wall  33.8s] PASS  VS-018  Boss  -- Entered arena -> boss bar shown=true; boss cast 22 telegraphed area attacks + 12 projectiles; boss hit the player 15 time(s); player damaged boss=true; phase 2 (enrage + summons) reached=true; boss HP trace ["100%", "86%", "69%", "46%", "39%", "23%", "9%"]; attempts=1, player deaths so far=0.
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
+[sim  361.8s | wall  34.0s] PASS  VS-019  Boss Defeat  -- Vorthane died: victory banner=true, encounter ended (bar hidden=true), exit portal spawned=true; unique 'Dawnbreaker, Oath of Vorthane's Ruin' dropped and collected=true; world flag boss_defeated_vorthane=true; quest 'The Hollow Bishop' -> ready (objectives {"enter_reliquary":1,"light_brazier":1,"slay_bishop":1}).
+[sim  361.9s | wall  34.0s] PASS  VS-020  Save  -- Esc -> Save Game wrote user://saves/slot_1.json (11186 bytes): character Seraphine Vael Lv 5, 782 XP, 586 gold, 15 bag items, 7 equipped, skills {"aegis_of_dawn":1,"ascendant_wrath":0,"celestial_ward":0,"dawnblade_discipline":0,"judgment_circle":1,"radiant_cleave":2,"sunlance":1}, quests {"q_ashen_toll":"completed","q_hollow_bishop":"ready"}, world flags {"boss_defeated_vorthane":true,"reliquary_unsealed":true}, zone sunken_reliquary.
+[sim  361.9s | wall  34.0s] Phase 1 finished: 20 results
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-[sim  366.0s | wall  36.8s] PASS  VS-018  Boss  -- Entered arena -> boss bar shown=true; boss cast 28 telegraphed area attacks + 14 projectiles; boss hit the player 17 time(s); player damaged boss=true; phase 2 (enrage + summons) reached=true; boss HP trace ["100%", "86%", "71%", "50%", "38%", "28%", "17%", "10%"]; attempts=1, player deaths so far=0.
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-[sim  371.2s | wall  37.0s] PASS  VS-019  Boss Defeat  -- Vorthane died: victory banner=true, encounter ended (bar hidden=true), exit portal spawned=true; unique 'Dawnbreaker, Oath of Vorthane's Ruin' dropped and collected=true; world flag boss_defeated_vorthane=true; quest 'The Hollow Bishop' -> ready (objectives {"enter_reliquary":1,"light_brazier":1,"slay_bishop":1}).
-[sim  371.3s | wall  37.0s] PASS  VS-020  Save  -- Esc -> Save Game wrote user://saves/slot_1.json (12426 bytes): character Seraphine Vael Lv 5, 782 XP, 585 gold, 19 bag items, 6 equipped, skills {"aegis_of_dawn":1,"ascendant_wrath":0,"celestial_ward":0,"dawnblade_discipline":0,"judgment_circle":1,"radiant_cleave":2,"sunlance":1}, quests {"q_ashen_toll":"completed","q_hollow_bishop":"ready"}, world flags {"boss_defeated_vorthane":true,"reliquary_unsealed":true}, zone sunken_reliquary.
-[sim  371.3s | wall  37.0s] Phase 1 finished: 20 results
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
@@ -812,10 +754,6 @@ ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+     at: cleanup (core/object/object.cpp:2284)
 wine phase1 exit: 0

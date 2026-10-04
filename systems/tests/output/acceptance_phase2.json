@@ -1,12 +1,12 @@
 {
 	"build": "0.1.0",
-	"date": "2026-10-04T18:50:42",
+	"date": "2026-10-05T00:22:06",
 	"deaths": 0,
 	"engine": "4.3-stable (official)",
 	"log": [
 		"[sim    0.7s | wall   0.3s] PASS  VS-021  Load  -- Fresh process: main menu 'Continue' enabled (latest slot 'slot_1'), loaded into zone 'sunken_reliquary'. Compared 16 saved fields (character, level, XP, gold, inventory uids, equipment uids, skills, attributes, quests, world flags/chests/discoveries, zone): mismatches=[].",
-		"[sim    0.7s | wall   0.3s] PASS  VS-023  Restart Persistence  -- Phase 1 process saved and exited with code 0; phase 2 is a new OS process that restarted the game and loaded: Lv 5, 794 XP, 609 gold, 20 items, quests {\"q_ashen_toll\":\"completed\",\"q_hollow_bishop\":\"ready\"} - identical to the pre-exit snapshot.",
-		"[sim   27.8s | wall   4.0s] Continued play after load: returned to Vale=true, turned in final quest=true (state completed, dialogue 'epilogue'), saved again=true"
+		"[sim    0.7s | wall   0.3s] PASS  VS-023  Restart Persistence  -- Phase 1 process saved and exited with code 0; phase 2 is a new OS process that restarted the game and loaded: Lv 5, 825 XP, 557 gold, 20 items, quests {\"q_ashen_toll\":\"completed\",\"q_hollow_bishop\":\"ready\"} - identical to the pre-exit snapshot.",
+		"[sim   26.3s | wall   3.6s] Continued play after load: returned to Vale=true, turned in final quest=true (state completed, dialogue 'epilogue'), saved again=true"
 	],
 	"phase": 2,
 	"results": [
@@ -22,12 +22,12 @@
 			"description": "Restart Persistence",
 			"id": "VS-023",
 			"known_issues": "",
-			"notes": "Phase 1 process saved and exited with code 0; phase 2 is a new OS process that restarted the game and loaded: Lv 5, 794 XP, 609 gold, 20 items, quests {\"q_ashen_toll\":\"completed\",\"q_hollow_bishop\":\"ready\"} - identical to the pre-exit snapshot.",
+			"notes": "Phase 1 process saved and exited with code 0; phase 2 is a new OS process that restarted the game and loaded: Lv 5, 825 XP, 557 gold, 20 items, quests {\"q_ashen_toll\":\"completed\",\"q_hollow_bishop\":\"ready\"} - identical to the pre-exit snapshot.",
 			"phase": 2,
 			"result": "PASS"
 		}
 	],
-	"sim_seconds": 27.7833333333333,
+	"sim_seconds": 26.3333333333333,
 	"teleports": [],
-	"wall_seconds": 3.97
+	"wall_seconds": 3.584
 }

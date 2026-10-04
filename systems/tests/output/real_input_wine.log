@@ -1,0 +1,19 @@
+PASS RI-01 Main menu responds to the mouse - window offset (0, 0)
+PASS RI-02 Start a new game with mouse clicks - New Game -> Begin as Seraphine clicked
+PASS RI-03 W key moves the heroine - moved 2.48 m north
+PASS RI-04 Left-click on NPC walks to him and opens dialogue - dialogue node intro
+PASS RI-05 Accept the quest by clicking dialogue options - quest q_ashen_toll active
+PASS RI-06 E key talks to the NPC - node toll_progress
+PASS RI-07 I key opens the inventory - 
+PASS RI-08 HUD 'Bag' button opens the inventory with the mouse - 
+PASS RI-09-character HUD 'Hero (C)' button works - 
+PASS RI-09-skills HUD 'Skills (K)' button works - 
+PASS RI-09-quests HUD 'Quests (J)' button works - 
+PASS RI-09-map HUD 'Map (M)' button works - 
+PASS RI-10 Left-click on the ground walks there (Sacred-style) - moved 3.3 m toward the click
+PASS RI-11 Left-click on an enemy attacks it until it dies - kills 0 -> 1
+PASS RI-12 Key 1 casts the first skill - skills cast: 1
+PASS RI-13 Space dodges - 
+PASS RI-14 Right-click performs a heavy attack - 
+PASS RI-15 Esc opens the pause menu, clicking Resume continues - 
+REAL INPUT: 18/18 passed

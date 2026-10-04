@@ -21,7 +21,7 @@ PASS  test_items.test_item_serialization_roundtrip
 PASS  test_items.test_jewelry_has_implicit_stats
 PASS  test_inventory.test_stacking
 PASS  test_inventory.test_stack_overflow_creates_new_stack
-WARNING: Inventory: refusing to add duplicate item uid 1714465_424_23086
+WARNING: Inventory: refusing to add duplicate item uid 1585499_424_69029
      at: push_warning (core/variant/variant_utility.cpp:1112)
 PASS  test_inventory.test_capacity_and_duplicates
 PASS  test_inventory.test_remove_and_partial_stack_remove
@@ -50,8 +50,11 @@ PASS  test_skills_data.test_classes_reference_valid_data
 PASS  test_skills_data.test_skill_types_are_supported
 PASS  test_skills_data.test_quest_targets_exist
 PASS  test_skills_data.test_five_enemy_archetypes_and_boss
+PASS  test_input_map.test_every_action_has_keyboard_or_mouse
+PASS  test_input_map.test_expected_default_keys
+PASS  test_input_map.test_gamepad_still_bound
 
-UNIT TESTS: 42 passed, 0 failed, 42 total
+UNIT TESTS: 45 passed, 0 failed, 45 total
 WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
      at: cleanup (core/object/object.cpp:2284)
 unit exit: 0

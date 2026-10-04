@@ -1,8 +1,8 @@
 {
-	"date": "2026-10-04T18:50:10",
+	"date": "2026-10-05T00:19:01",
 	"engine": "4.3-stable (official)",
 	"failed": 0,
-	"passed": 42,
+	"passed": 45,
 	"results": [
 		{
 			"notes": "",
@@ -255,6 +255,24 @@
 			"result": "PASS",
 			"suite": "test_skills_data",
 			"test": "test_five_enemy_archetypes_and_boss"
+		},
+		{
+			"notes": "",
+			"result": "PASS",
+			"suite": "test_input_map",
+			"test": "test_every_action_has_keyboard_or_mouse"
+		},
+		{
+			"notes": "",
+			"result": "PASS",
+			"suite": "test_input_map",
+			"test": "test_expected_default_keys"
+		},
+		{
+			"notes": "",
+			"result": "PASS",
+			"suite": "test_input_map",
+			"test": "test_gamepad_still_bound"
 		}
 	]
 }

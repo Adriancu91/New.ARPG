@@ -536,55 +536,7 @@ ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-ERROR: Parameter "m" is null.
-   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-BENCHMARK {"cpu":"Intel(R) Xeon(R) Processor @ 2.10GHz","cpu_cores":2,"date":"2026-10-04T18:50:58","display":"headless","exploration":{"avg_fps":504.623083352169,"avg_ms":1.98167708333333,"frames":480,"max_ms":3.212,"p50_ms":1.969,"p95_ms":2.268,"p99_ms":2.547},"fight_15plus_enemies":{"avg_fps":386.368880129619,"avg_ms":2.58820016680567,"frames":1199,"max_ms":12.338,"p50_ms":2.294,"p95_ms":3.885,"p99_ms":5.048},"memory_cycles":[{"cycle":0,"nodes":1333,"objects":4010,"orphans":0,"static_mb":55.07},{"cycle":1,"nodes":2748,"objects":5687,"orphans":0,"static_mb":59.48},{"cycle":2,"nodes":1331,"objects":3999,"orphans":0,"static_mb":54.95},{"cycle":3,"nodes":2748,"objects":5688,"orphans":0,"static_mb":59.48},{"cycle":4,"nodes":1366,"objects":4057,"orphans":0,"static_mb":55.4},{"cycle":5,"nodes":2748,"objects":5687,"orphans":0,"static_mb":59.73}],"renderer":" / ","rendering_method":"forward_plus","zone_load_ms":74}
+BENCHMARK {"cpu":"Intel(R) Xeon(R) Processor @ 2.10GHz","cpu_cores":2,"date":"2026-10-05T00:09:00","display":"headless","exploration":{"avg_fps":534.804640321596,"avg_ms":1.86984166666667,"frames":480,"max_ms":3.019,"p50_ms":1.858,"p95_ms":2.209,"p99_ms":2.563},"fight_15plus_enemies":{"avg_fps":414.209421381566,"avg_ms":2.41423769808174,"frames":1199,"max_ms":8.704,"p50_ms":2.149,"p95_ms":3.717,"p99_ms":4.673},"memory_cycles":[{"cycle":0,"nodes":1302,"objects":3973,"orphans":0,"static_mb":55.88},{"cycle":1,"nodes":2755,"objects":5720,"orphans":0,"static_mb":60.45},{"cycle":2,"nodes":1337,"objects":4022,"orphans":0,"static_mb":55.93},{"cycle":3,"nodes":2755,"objects":5719,"orphans":0,"static_mb":60.46},{"cycle":4,"nodes":1339,"objects":4038,"orphans":0,"static_mb":55.99},{"cycle":5,"nodes":2755,"objects":5720,"orphans":0,"static_mb":60.46}],"renderer":" / ","rendering_method":"forward_plus","zone_load_ms":57}
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.

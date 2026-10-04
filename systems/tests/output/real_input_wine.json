@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-05 00:24:18",
+  "binary": "builds/windows_test/Gloamreach_test.exe",
+  "wine": true,
+  "passed": 18,
+  "total": 18,
+  "results": [
+    {
+      "id": "RI-01",
+      "description": "Main menu responds to the mouse",
+      "result": "PASS",
+      "notes": "window offset (0, 0)"
+    },
+    {
+      "id": "RI-02",
+      "description": "Start a new game with mouse clicks",
+      "result": "PASS",
+      "notes": "New Game -> Begin as Seraphine clicked"
+    },
+    {
+      "id": "RI-03",
+      "description": "W key moves the heroine",
+      "result": "PASS",
+      "notes": "moved 2.48 m north"
+    },
+    {
+      "id": "RI-04",
+      "description": "Left-click on NPC walks to him and opens dialogue",
+      "result": "PASS",
+      "notes": "dialogue node intro"
+    },
+    {
+      "id": "RI-05",
+      "description": "Accept the quest by clicking dialogue options",
+      "result": "PASS",
+      "notes": "quest q_ashen_toll active"
+    },
+    {
+      "id": "RI-06",
+      "description": "E key talks to the NPC",
+      "result": "PASS",
+      "notes": "node toll_progress"
+    },
+    {
+      "id": "RI-07",
+      "description": "I key opens the inventory",
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "id": "RI-08",
+      "description": "HUD 'Bag' button opens the inventory with the mouse",
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "id": "RI-09-character",
+      "description": "HUD 'Hero (C)' button works",
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "id": "RI-09-skills",
+      "description": "HUD 'Skills (K)' button works",
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "id": "RI-09-quests",
+      "description": "HUD 'Quests (J)' button works",
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "id": "RI-09-map",
+      "description": "HUD 'Map (M)' button works",
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "id": "RI-10",
+      "description": "Left-click on the ground walks there (Sacred-style)",
+      "result": "PASS",
+      "notes": "moved 3.3 m toward the click"
+    },
+    {
+      "id": "RI-11",
+      "description": "Left-click on an enemy attacks it until it dies",
+      "result": "PASS",
+      "notes": "kills 0 -> 1"
+    },
+    {
+      "id": "RI-12",
+      "description": "Key 1 casts the first skill",
+      "result": "PASS",
+      "notes": "skills cast: 1"
+    },
+    {
+      "id": "RI-13",
+      "description": "Space dodges",
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "id": "RI-14",
+      "description": "Right-click performs a heavy attack",
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "id": "RI-15",
+      "description": "Esc opens the pause menu, clicking Resume continues",
+      "result": "PASS",
+      "notes": ""
+    }
+  ]
+}

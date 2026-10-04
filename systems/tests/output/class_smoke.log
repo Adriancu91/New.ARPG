@@ -16,7 +16,7 @@ ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-CLASS dawnwarden {"aegis_of_dawn":{"damage":0,"executed":true,"pass":true},"ascendant_wrath":{"damage":66,"executed":true,"pass":true},"basic_attack":{"damage":9,"executed":true,"pass":true},"heavy_attack":{"damage":22,"executed":true,"pass":true},"judgment_circle":{"damage":41,"executed":true,"pass":true},"radiant_cleave":{"damage":51,"executed":true,"pass":true},"sunlance":{"damage":23,"executed":true,"pass":true}}
+CLASS dawnwarden {"aegis_of_dawn":{"damage":0,"executed":true,"pass":true},"ascendant_wrath":{"damage":84,"executed":true,"pass":true},"basic_attack":{"damage":11,"executed":true,"pass":true},"heavy_attack":{"damage":22,"executed":true,"pass":true},"judgment_circle":{"damage":38,"executed":true,"pass":true},"radiant_cleave":{"damage":27,"executed":true,"pass":true},"sunlance":{"damage":28,"executed":true,"pass":true}}
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
@@ -61,7 +61,7 @@ ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-CLASS hellbrand {"basic_attack":{"damage":11,"executed":true,"pass":true},"brimstone_nova":{"damage":34,"executed":true,"pass":true},"demonform":{"damage":0,"executed":true,"pass":true},"heavy_attack":{"damage":26,"executed":true,"pass":true},"hellfire_orb":{"damage":27,"executed":true,"pass":true},"infernal_flurry":{"damage":65.3500000000058,"executed":true,"pass":true},"shadowstep":{"damage":21.6750000000029,"executed":true,"pass":true}}
+CLASS hellbrand {"basic_attack":{"damage":13,"executed":true,"pass":true},"brimstone_nova":{"damage":36.0499999999884,"executed":true,"pass":true},"demonform":{"damage":0,"executed":true,"pass":true},"heavy_attack":{"damage":22,"executed":true,"pass":true},"hellfire_orb":{"damage":31.0499999999884,"executed":true,"pass":true},"infernal_flurry":{"damage":71.75,"executed":true,"pass":true},"shadowstep":{"damage":21.375,"executed":true,"pass":true}}
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
@@ -94,7 +94,7 @@ ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
-CLASS starweaver {"arcane_shot":{"damage":42,"executed":true,"pass":true},"basic_attack":{"damage":12,"executed":true,"pass":true},"frost_snare":{"damage":29,"executed":true,"pass":true},"gale_leap":{"damage":0,"executed":true,"pass":true},"heavy_attack":{"damage":18,"executed":true,"pass":true},"split_volley":{"damage":66,"executed":true,"pass":true},"starfall":{"damage":72,"executed":true,"pass":true}}
+CLASS starweaver {"arcane_shot":{"damage":18,"executed":true,"pass":true},"basic_attack":{"damage":8,"executed":true,"pass":true},"frost_snare":{"damage":30,"executed":true,"pass":true},"gale_leap":{"damage":0,"executed":true,"pass":true},"heavy_attack":{"damage":25,"executed":true,"pass":true},"split_volley":{"damage":63,"executed":true,"pass":true},"starfall":{"damage":88,"executed":true,"pass":true}}
 CLASS_SMOKE all_pass=true
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
@@ -432,3 +432,5 @@ ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
 ERROR: Parameter "m" is null.
    at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+     at: cleanup (core/object/object.cpp:2284)

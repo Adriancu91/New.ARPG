@@ -14,6 +14,7 @@ const SUITES := [
 	"res://systems/tests/unit/test_quests.gd",
 	"res://systems/tests/unit/test_save.gd",
 	"res://systems/tests/unit/test_skills_data.gd",
+	"res://systems/tests/unit/test_input_map.gd",
 ]
 
 

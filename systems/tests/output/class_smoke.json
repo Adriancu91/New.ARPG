@@ -7,12 +7,12 @@
 			"pass": true
 		},
 		"ascendant_wrath": {
-			"damage": 66,
+			"damage": 84,
 			"executed": true,
 			"pass": true
 		},
 		"basic_attack": {
-			"damage": 9,
+			"damage": 11,
 			"executed": true,
 			"pass": true
 		},
@@ -22,29 +22,29 @@
 			"pass": true
 		},
 		"judgment_circle": {
-			"damage": 41,
+			"damage": 38,
 			"executed": true,
 			"pass": true
 		},
 		"radiant_cleave": {
-			"damage": 51,
+			"damage": 27,
 			"executed": true,
 			"pass": true
 		},
 		"sunlance": {
-			"damage": 23,
+			"damage": 28,
 			"executed": true,
 			"pass": true
 		}
 	},
 	"hellbrand": {
 		"basic_attack": {
-			"damage": 11,
+			"damage": 13,
 			"executed": true,
 			"pass": true
 		},
 		"brimstone_nova": {
-			"damage": 34,
+			"damage": 36.0499999999884,
 			"executed": true,
 			"pass": true
 		},
@@ -54,39 +54,39 @@
 			"pass": true
 		},
 		"heavy_attack": {
-			"damage": 26,
+			"damage": 22,
 			"executed": true,
 			"pass": true
 		},
 		"hellfire_orb": {
-			"damage": 27,
+			"damage": 31.0499999999884,
 			"executed": true,
 			"pass": true
 		},
 		"infernal_flurry": {
-			"damage": 65.3500000000058,
+			"damage": 71.75,
 			"executed": true,
 			"pass": true
 		},
 		"shadowstep": {
-			"damage": 21.6750000000029,
+			"damage": 21.375,
 			"executed": true,
 			"pass": true
 		}
 	},
 	"starweaver": {
 		"arcane_shot": {
-			"damage": 42,
+			"damage": 18,
 			"executed": true,
 			"pass": true
 		},
 		"basic_attack": {
-			"damage": 12,
+			"damage": 8,
 			"executed": true,
 			"pass": true
 		},
 		"frost_snare": {
-			"damage": 29,
+			"damage": 30,
 			"executed": true,
 			"pass": true
 		},
@@ -96,17 +96,17 @@
 			"pass": true
 		},
 		"heavy_attack": {
-			"damage": 18,
+			"damage": 25,
 			"executed": true,
 			"pass": true
 		},
 		"split_volley": {
-			"damage": 66,
+			"damage": 63,
 			"executed": true,
 			"pass": true
 		},
 		"starfall": {
-			"damage": 72,
+			"damage": 88,
 			"executed": true,
 			"pass": true
 		}

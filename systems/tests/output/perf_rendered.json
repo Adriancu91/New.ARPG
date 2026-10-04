@@ -1,71 +1,71 @@
 {
 	"cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
 	"cpu_cores": 2,
-	"date": "2026-10-04T18:55:14",
+	"date": "2026-10-05T00:12:57",
 	"display": "X11",
 	"exploration": {
-		"avg_fps": 7.49203471842187,
-		"avg_ms": 133.475088888889,
-		"frames": 15,
-		"max_ms": 146.040333333333,
+		"avg_fps": 7.47999452090401,
+		"avg_ms": 133.6899375,
+		"frames": 16,
+		"max_ms": 148.944666666666,
 		"p50_ms": 133.333333333333,
-		"p95_ms": 146.040333333333,
-		"p99_ms": 146.040333333333
+		"p95_ms": 148.944666666666,
+		"p99_ms": 148.944666666666
 	},
 	"fight_15plus_enemies": {
-		"avg_fps": 7.50398449069815,
-		"avg_ms": 133.262535555556,
+		"avg_fps": 7.49804700868914,
+		"avg_ms": 133.368062222222,
 		"frames": 150,
-		"max_ms": 149.107333333333,
+		"max_ms": 144.881999999999,
 		"p50_ms": 133.333333333333,
-		"p95_ms": 143.204777777778,
-		"p99_ms": 146.728000000001
+		"p95_ms": 141.904,
+		"p99_ms": 144.778333333333
 	},
 	"memory_cycles": [
 		{
 			"cycle": 0,
-			"nodes": 1367,
-			"objects": 3933,
+			"nodes": 1373,
+			"objects": 3956,
 			"orphans": 0,
-			"static_mb": 72.97
+			"static_mb": 73.7
 		},
 		{
 			"cycle": 1,
-			"nodes": 2748,
-			"objects": 5572,
+			"nodes": 2755,
+			"objects": 5601,
 			"orphans": 0,
-			"static_mb": 78.79
+			"static_mb": 79.54
 		},
 		{
 			"cycle": 2,
-			"nodes": 1364,
-			"objects": 3911,
+			"nodes": 1374,
+			"objects": 3976,
 			"orphans": 0,
-			"static_mb": 72.83
+			"static_mb": 73.72
 		},
 		{
 			"cycle": 3,
-			"nodes": 2748,
-			"objects": 5573,
+			"nodes": 2755,
+			"objects": 5603,
 			"orphans": 0,
-			"static_mb": 78.78
+			"static_mb": 79.54
 		},
 		{
 			"cycle": 4,
-			"nodes": 1363,
-			"objects": 3915,
+			"nodes": 1373,
+			"objects": 3966,
 			"orphans": 0,
-			"static_mb": 72.82
+			"static_mb": 73.65
 		},
 		{
 			"cycle": 5,
-			"nodes": 2748,
-			"objects": 5572,
+			"nodes": 2755,
+			"objects": 5605,
 			"orphans": 0,
-			"static_mb": 78.79
+			"static_mb": 79.56
 		}
 	],
 	"renderer": "llvmpipe (LLVM 20.1.2, 256 bits) / Mesa",
 	"rendering_method": "forward_plus",
-	"zone_load_ms": 64
+	"zone_load_ms": 62
 }

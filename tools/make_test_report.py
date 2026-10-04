@@ -178,6 +178,17 @@ def main():
             md.append(f"| {r['id']} | {r['result']} |\n")
     else:
         md.append("Not run in this report.\n")
+    for label, fname in [("Linux build", "real_input.json"), ("Windows .exe under Wine", "real_input_wine.json")]:
+        ri = load(fname) or {}
+        md.append(f"\n## Real mouse & keyboard input — {label}\n\n")
+        if ri:
+            md.append(f"`tools/real_input_test.py` runs the game in a real X11 window and plays it with OS-level events from `xdotool` "
+                      f"(mouse clicks, key presses), like a player's hardware: **{ri['passed']}/{ri['total']} PASS** ({ri['date']}).\n\n")
+            md.append("| Test | Description | Result |\n|---|---|---|\n")
+            for r in ri["results"]:
+                md.append(f"| {r['id']} | {r['description']} | {r['result']} |\n")
+        else:
+            md.append("Not run.\n")
     smoke = load("class_smoke.json") or {}
     md.append("\n## Additional verification: all three heroines\n\n")
     if smoke:

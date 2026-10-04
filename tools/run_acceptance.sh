@@ -78,5 +78,19 @@ if command -v wine >/dev/null && [ -f "$HOME/.local/share/godot/export_templates
   done
 fi
 
+# Real OS-level mouse/keyboard input on a real game window (Xvfb + xdotool)
+if command -v xvfb-run >/dev/null && command -v xdotool >/dev/null; then
+  echo "== real input test (xdotool on the game window)"
+  timeout 900 python3 tools/real_input_test.py > "$OUT/real_input.log" 2>&1
+  echo "real input exit: $?" | tee -a "$OUT/real_input.log"
+  if command -v wine >/dev/null && [ -f builds/windows_test/Gloamreach_test.exe ]; then
+    cp "$OUT/real_input.json" "$OUT/real_input_linux.json"
+    timeout 900 python3 tools/real_input_test.py --exe builds/windows_test/Gloamreach_test.exe --wine > "$OUT/real_input_wine.log" 2>&1
+    echo "real input (wine) exit: $?"
+    cp "$OUT/real_input.json" "$OUT/real_input_wine.json"
+    cp "$OUT/real_input_linux.json" "$OUT/real_input.json"
+  fi
+fi
+
 echo "== report"
 python3 tools/make_test_report.py
