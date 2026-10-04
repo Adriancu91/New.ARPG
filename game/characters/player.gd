@@ -82,6 +82,7 @@ func setup(character: CharacterData) -> void:
 	mana = clampf(data.mana, 0.0, max_mana) if data.mana >= 0 else max_mana
 	stamina = max_stamina
 	data.stats_changed.connect(refresh_stats)
+	data.leveled_up.connect(_on_level_up)
 	data.equipment.changed.connect(refresh_stats)
 	_add_shadow_blob()
 
@@ -117,6 +118,13 @@ func refresh_stats() -> void:
 		health += max_health - old_max
 	health = minf(health, max_health)
 	mana = minf(mana, max_mana)
+
+
+func _on_level_up(_lv: int) -> void:
+	refresh_stats()
+	health = max_health
+	mana = max_mana
+	stamina = max_stamina
 
 
 func _is_player() -> bool:
@@ -285,6 +293,8 @@ func _handle_actions() -> void:
 
 
 func _mouse_over_ui() -> bool:
+	if aim_override != null:
+		return false   # automated driver: no real mouse
 	var vp := get_viewport()
 	return vp != null and vp.gui_get_hovered_control() != null
 
@@ -498,7 +508,7 @@ func dash_to(target: Vector3, duration: float) -> void:
 # ------------------------------------------------------------- receiving
 
 func take_hit(hit: Damage.Hit) -> float:
-	if not is_alive() or is_invulnerable():
+	if not is_alive() or is_invulnerable() or hit == null or hit.amount <= 0.0:
 		return 0.0
 	if blocking and not hit.unblockable and hit.source != null and is_instance_valid(hit.source):
 		var to_src: Vector3 = hit.source.global_position - global_position
