@@ -1,0 +1,96 @@
+{
+	"attribute_points": 5,
+	"class_id": "dawnwarden",
+	"discovered": [
+		"area_chapel",
+		"area_broken_saint",
+		"area_cult_camp",
+		"area_reliquary_gate",
+		"area_reliquary_depths",
+		"area_boss_arena"
+	],
+	"equipment": {
+		"amulet": "16961534_41_8325",
+		"armor": "19945935_48_26717",
+		"boots": "1984283_3_10627",
+		"gloves": "25993166_65_51066",
+		"helmet": "8478028_24_53069",
+		"ring1": "10879361_26_74457",
+		"ring2": "19524186_47_51781",
+		"weapon": "25992989_64_66521"
+	},
+	"flags": {
+		"boss_defeated_vorthane": true,
+		"reliquary_unsealed": true
+	},
+	"gold": 609,
+	"hero_name": "Seraphine Vael",
+	"inventory": [
+		"11147335_28_70363|armor_corset|1",
+		"11342836_30_34786|amulet_bone|1",
+		"12204032_32_91720|helm_circlet|1",
+		"15847412_40_28743|helm_circlet|1",
+		"18086873_46_8855|amulet_star|1",
+		"1984247_1_35276|oathblade_worn|1",
+		"1984270_2_53240|vestment_pilgrim|1",
+		"1984354_5_88619|potion_health|15",
+		"21260565_57_34144|sword_cathedral|1",
+		"21424366_58_66363|gloves_plate|1",
+		"21546485_60_94818|sword_vigil|1",
+		"21803718_61_80764|sword_cathedral|1",
+		"23814307_62_99232|sword_cathedral|1",
+		"26057356_68_58349|void_pearl|1",
+		"5153279_14_59029|ember_dust|3",
+		"5168422_15_58975|ash_shard|13",
+		"6406853_16_84478|sword_vigil|1",
+		"7490961_19_47192|sword_vigil|1",
+		"7721698_21_97638|bow_hunter|1",
+		"8243530_22_3576|armor_corset|1"
+	],
+	"level": 5,
+	"opened_chests": [
+		"chest_chapel",
+		"chest_shrine",
+		"chest_cult_camp",
+		"chest_crypt"
+	],
+	"quests": {
+		"progress": {
+			"q_ashen_toll": {
+				"collect_fragments": 3,
+				"find_shrine": 1,
+				"kill_hollow": 5
+			},
+			"q_hollow_bishop": {
+				"enter_reliquary": 1,
+				"light_brazier": 1,
+				"slay_bishop": 1
+			}
+		},
+		"rewarded": {
+			"q_ashen_toll": true
+		},
+		"states": {
+			"q_ashen_toll": "completed",
+			"q_hollow_bishop": "ready"
+		}
+	},
+	"skill_points": 1,
+	"skill_ranks": {
+		"aegis_of_dawn": 1,
+		"ascendant_wrath": 0,
+		"celestial_ward": 0,
+		"dawnblade_discipline": 0,
+		"judgment_circle": 1,
+		"radiant_cleave": 2,
+		"sunlance": 1
+	},
+	"spent_attributes": {
+		"agility": 0,
+		"might": 9,
+		"spirit": 0,
+		"vitality": 6
+	},
+	"xp": 794,
+	"zone": "sunken_reliquary"
+}

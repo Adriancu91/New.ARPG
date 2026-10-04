@@ -1,0 +1,71 @@
+{
+	"cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+	"cpu_cores": 2,
+	"date": "2026-10-04T18:50:58",
+	"display": "headless",
+	"exploration": {
+		"avg_fps": 504.623083352169,
+		"avg_ms": 1.98167708333333,
+		"frames": 480,
+		"max_ms": 3.212,
+		"p50_ms": 1.969,
+		"p95_ms": 2.268,
+		"p99_ms": 2.547
+	},
+	"fight_15plus_enemies": {
+		"avg_fps": 386.368880129619,
+		"avg_ms": 2.58820016680567,
+		"frames": 1199,
+		"max_ms": 12.338,
+		"p50_ms": 2.294,
+		"p95_ms": 3.885,
+		"p99_ms": 5.048
+	},
+	"memory_cycles": [
+		{
+			"cycle": 0,
+			"nodes": 1333,
+			"objects": 4010,
+			"orphans": 0,
+			"static_mb": 55.07
+		},
+		{
+			"cycle": 1,
+			"nodes": 2748,
+			"objects": 5687,
+			"orphans": 0,
+			"static_mb": 59.48
+		},
+		{
+			"cycle": 2,
+			"nodes": 1331,
+			"objects": 3999,
+			"orphans": 0,
+			"static_mb": 54.95
+		},
+		{
+			"cycle": 3,
+			"nodes": 2748,
+			"objects": 5688,
+			"orphans": 0,
+			"static_mb": 59.48
+		},
+		{
+			"cycle": 4,
+			"nodes": 1366,
+			"objects": 4057,
+			"orphans": 0,
+			"static_mb": 55.4
+		},
+		{
+			"cycle": 5,
+			"nodes": 2748,
+			"objects": 5687,
+			"orphans": 0,
+			"static_mb": 59.73
+		}
+	],
+	"renderer": " / ",
+	"rendering_method": "forward_plus",
+	"zone_load_ms": 74
+}

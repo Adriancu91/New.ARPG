@@ -1,0 +1,57 @@
+Godot Engine v4.3.stable.official.77dcf97d8 - https://godotengine.org
+
+PASS  test_damage.test_armor_reduction_curve
+PASS  test_damage.test_mitigate_physical_and_light_bonus
+PASS  test_damage.test_roll_player_crit_and_range
+ERROR: Parameter "m" is null.
+   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:120)
+PASS  test_damage.test_combatant_health_and_death
+PASS  test_damage.test_burn_status_deals_damage_over_time
+PASS  test_damage.test_stun_and_chill_speed
+PASS  test_progression.test_xp_curve_monotonic
+PASS  test_progression.test_level_up_with_overflow
+PASS  test_progression.test_character_level_up_grants_points_and_stats
+PASS  test_progression.test_spend_attributes
+PASS  test_progression.test_enemy_xp_scaling
+PASS  test_items.test_generation_is_valid_for_all_rarities
+PASS  test_items.test_rarity_roll_distribution
+PASS  test_items.test_higher_rarity_has_more_power_on_average
+PASS  test_items.test_unique_items
+PASS  test_items.test_item_serialization_roundtrip
+PASS  test_items.test_jewelry_has_implicit_stats
+PASS  test_inventory.test_stacking
+PASS  test_inventory.test_stack_overflow_creates_new_stack
+WARNING: Inventory: refusing to add duplicate item uid 1714465_424_23086
+     at: push_warning (core/variant/variant_utility.cpp:1112)
+PASS  test_inventory.test_capacity_and_duplicates
+PASS  test_inventory.test_remove_and_partial_stack_remove
+PASS  test_inventory.test_salvage_and_craft
+PASS  test_equipment.test_equip_swaps_without_duplication
+PASS  test_equipment.test_unequip
+PASS  test_equipment.test_class_weapon_restriction
+PASS  test_equipment.test_rings_fill_both_slots
+PASS  test_equipment.test_armor_item_increases_armor
+PASS  test_equipment.test_comparison_counterpart
+PASS  test_loot.test_enemy_loot_valid
+PASS  test_loot.test_quest_fragment_drops_only_when_needed
+PASS  test_loot.test_chest_loot_min_uncommon
+PASS  test_loot.test_boss_loot_has_unique
+PASS  test_quests.test_quest_lifecycle
+PASS  test_quests.test_rewards_granted_once
+PASS  test_quests.test_quest_serialization
+PASS  test_quests.test_boss_and_interact_objectives
+PASS  test_save.test_save_load_roundtrip
+ERROR: Parse JSON failed. Error at line 0: Expected key
+   at: parse_string (core/io/json.cpp:576)
+ERROR: Corrupted save: user://test_saves/unit_slot.json
+   at: push_error (core/variant/variant_utility.cpp:1092)
+PASS  test_save.test_missing_or_corrupt_save
+PASS  test_skills_data.test_classes_reference_valid_data
+PASS  test_skills_data.test_skill_types_are_supported
+PASS  test_skills_data.test_quest_targets_exist
+PASS  test_skills_data.test_five_enemy_archetypes_and_boss
+
+UNIT TESTS: 42 passed, 0 failed, 42 total
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+     at: cleanup (core/object/object.cpp:2284)
+unit exit: 0

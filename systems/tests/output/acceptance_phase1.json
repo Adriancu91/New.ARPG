@@ -1,0 +1,223 @@
+{
+	"build": "0.1.0",
+	"date": "2026-10-04T18:50:36",
+	"deaths": 0,
+	"engine": "4.3-stable (official)",
+	"log": [
+		"[sim    0.2s | wall   0.2s] Main menu visible=true, New Game available=true",
+		"[sim    0.8s | wall   0.4s] PASS  VS-001  Game Launch  -- Main menu shown on boot with New Game enabled; gameplay reached (zone 'vale_of_cinders' loaded, player spawned).",
+		"[sim    0.8s | wall   0.4s] PASS  VS-002  Character Selection  -- Selected Dawnwarden -> Seraphine Vael (Dawnwarden), Lv 1, HP 204/204, Radiance 90, weapon 'Worn Oathblade', zone vale_of_cinders.",
+		"[sim    8.6s | wall   1.6s] PASS  VS-003  Movement  -- WASD input actions: velocity after 1 frame(s); walked 19.4 m south and was stopped by the boundary wall at z=63.40 (wall 66.0); moved back north/left/right freely; camera focus offset 0.00 m while moving, 0.11 m at rest.",
+		"[sim   12.3s | wall   2.1s] PASS  VS-014  Quest Start  -- Pressed E near Brother Ivenn -> dialogue 'intro' -> 'offer' -> accepted. State=active. Quest log lists 'The Ashen Toll'; HUD tracker: Quests | The Ashen Toll |   - Put down Hollowed Sentinels (0/5) |   - Recover Reliquary Lamp Fragments (0/3) |   - Find the Shrine of the Broken Saint | ",
+		"[sim   12.5s | wall   2.2s] Merchant opened=true, bought potion=false (gold 10 -> 10, potions 3 -> 3)",
+		"[sim   21.4s | wall   3.3s] PASS  VS-007  Enemy AI  -- Sentinel idle while player was 15 m away (aggro=false); detected the player at 8.4 m (detect radius 13), closed from 8.5 m to 2.2 m, telegraphed and landed 2 hit(s) (HP 204 -> 181); AI states observed: [\"CHASE\", \"WINDUP\", \"RECOVER\"]; it was then killed (died=true). Hit detail: [\"dist 2.2 state WINDUP frame 1090 kb 5.0\", \"dist 0.2 state WINDUP frame 1214 kb 5.0\"]",
+		"[sim   21.4s | wall   3.3s] PASS  VS-004  Basic Combat  -- Killed a Hollowed Sentinel with basic attacks (LMB action) only: 5 hits landed, health 60 -> 0, 6 floating damage numbers present, hit flash + knockback applied.",
+		"[sim   21.4s | wall   3.3s] PASS  VS-008  XP  -- Killing the sentinel awarded 25 XP (expected 25 from data: base 25, enemy Lv 1 vs player Lv 1); total XP 0 -> 25; HUD XP bar shows 25 == character XP 25.",
+		"[sim   22.0s | wall   3.4s] PASS  VS-005  Skill  -- Key 1 cast Radiant Cleave (Light cone): [30] skill damage to the target, resource 90.0 -> 78.0 (cost 12, minus regen), cooldown 2.50s started and blocked immediate re-use; key 2 cast Aegis of Dawn (damage-reduction buff active=true).",
+		"[sim   30.4s | wall   4.6s] PASS  VS-006  Dodge  -- Space: dodge moved 5.77 m in 0.32s, i-frames 0.22s then ended, 22 stamina spent, instant re-dodge refused. Spamming dodge for 6 s kept the player invulnerable only 24% of frames (cooldown + stamina gate).",
+		"[sim   41.4s | wall   6.0s] PASS  VS-009  Level Up  -- Kill granting 20 XP took the hero from 95 XP (Lv 1, threshold 100) to Lv 2 with 15 XP carried over; 'LEVEL 2' banner shown=true; attribute points 0 -> 5, skill points 0 -> 1; max health 204 -> 213; health refilled=true.",
+		"[sim   46.5s | wall   6.6s] PASS  VS-010  Loot  -- Enemy drop 'Vigil Longsword' [common, base sword_vigil, ilvl 1] from enemy:hollow_sentinel: pickup showed rarity beam + name label, walked over it -> in inventory. Total pickups collected in this fight: 3 (2 equipment).",
+		"[sim   56.8s | wall   7.8s] PASS  VS-011  Inventory  -- Pressed I: window open=true, 9 bag items shown in the grid with icons; selecting the looted item shows: \"Worn Oathblade / Common Weapon - Sword   Item level 1 / Damage 8 - 12  ▼ -2.5 /  / Power 20  ▼ -5.0 (worse)\"",
+		"[sim   56.8s | wall   7.8s] PASS  VS-012  Equipment  -- Equipped 'Vigil Longsword' into weapon via inventory right-click. 'Vigil Longsword' returned to the bag (bag size unchanged). Damage 13-20 -> 13-19, armor 15 -> 15, max health 237 -> 237; live player stats updated=true; duplicate uids=false.",
+		"[sim   56.8s | wall   7.8s] PASS  VS-013  Item Comparison  -- Selected 'Vigil Longsword' in the bag while wearing 'Vigil Longsword': the selected panel shows per-stat deltas and a verdict (\"Vigil Longsword / Common Weapon - Sword   Item level 1 / Damage 10 - 15  ▲ +0.5 /  / Power 25  ▲ +1.0 (better)\"); the 'Currently equipped' panel shows 'Vigil Longsword'.",
+		"[sim  139.4s | wall  15.4s] PASS  VS-015  Quest Progression  -- Objectives advanced by gameplay: kills 5/5, kills 5/5, shrine explored=true, fragments 4/3, fragments 5/3. Mid-quest save contained the live kill count=true. State now 'ready'.",
+		"[sim  153.4s | wall  16.3s] PASS  VS-016  Quest Completion  -- Turned in at Ivenn (node 'toll_done'): +260 XP (Lv 3 -> 3), +75 gold, potions 8 -> 11, random rare item granted (bag 12 -> 12 items), fragments consumed; second completion attempt returned false with no extra gold; Reliquary unsealed; follow-up quest active; completion + rewarded flag present in save=true.",
+		"[sim  190.4s | wall  18.9s] PASS  VS-017  Dungeon  -- Gate open after quest=true; pressed E -> zone 'sunken_reliquary' loaded, player at entrance with HP 376/376, 13 enemies + boss spawned; 'Descend' objective updated=true.",
+		"[sim  220.6s | wall  20.8s] bot: giving up on unreachable ashen_cultist at (-3, 0, -31)",
+		"[sim  240.9s | wall  21.7s] bot: giving up on unreachable ashen_cultist at (-11, 0, -31)",
+		"[sim  254.7s | wall  22.2s] Brazier lit=true, door closed before=true, open after=true, player Lv 4 HP 177/382, potions 14",
+		"[sim  291.8s | wall  24.2s] PASS  VS-018  Boss  -- Entered arena -> boss bar shown=true; boss cast 20 telegraphed area attacks + 7 projectiles; boss hit the player 11 time(s); player damaged boss=true; phase 2 (enrage + summons) reached=true; boss HP trace [\"100%\", \"79%\", \"58%\", \"48%\", \"39%\", \"17%\"]; attempts=1, player deaths so far=0.",
+		"[sim  297.8s | wall  24.4s] PASS  VS-019  Boss Defeat  -- Vorthane died: victory banner=true, encounter ended (bar hidden=true), exit portal spawned=true; unique 'Dawnbreaker, Oath of Vorthane's Ruin' dropped and collected=true; world flag boss_defeated_vorthane=true; quest 'The Hollow Bishop' -> ready (objectives {\"enter_reliquary\":1,\"light_brazier\":1,\"slay_bishop\":1}).",
+		"[sim  297.9s | wall  24.5s] PASS  VS-020  Save  -- Esc -> Save Game wrote user://saves/slot_1.json (13864 bytes): character Seraphine Vael Lv 5, 794 XP, 609 gold, 20 bag items, 8 equipped, skills {\"aegis_of_dawn\":1,\"ascendant_wrath\":0,\"celestial_ward\":0,\"dawnblade_discipline\":0,\"judgment_circle\":1,\"radiant_cleave\":2,\"sunlance\":1}, quests {\"q_ashen_toll\":\"completed\",\"q_hollow_bishop\":\"ready\"}, world flags {\"boss_defeated_vorthane\":true,\"reliquary_unsealed\":true}, zone sunken_reliquary."
+	],
+	"perf": {
+		"avg_cpu_frame_ms": 16.5069260587058,
+		"frames": 17852,
+		"max_cpu_frame_ms": 125.183,
+		"memory_samples_mb": [
+			[
+				"boot",
+				42.9241542816162
+			],
+			[
+				"in_world",
+				56.8702297210693
+			],
+			[
+				"after_boss",
+				58.9536190032959
+			],
+			[
+				"end_phase1",
+				59.0640087127686
+			]
+		],
+		"p99_cpu_frame_ms": 125.183
+	},
+	"phase": 1,
+	"results": [
+		{
+			"description": "Game Launch",
+			"id": "VS-001",
+			"known_issues": "Executed on Linux headless (Godot 4.3) - the Windows build was not launched on Windows hardware.",
+			"notes": "Main menu shown on boot with New Game enabled; gameplay reached (zone 'vale_of_cinders' loaded, player spawned).",
+			"phase": 1,
+			"result": "PASS"
+		},
+		{
+			"description": "Character Selection",
+			"id": "VS-002",
+			"known_issues": "",
+			"notes": "Selected Dawnwarden -> Seraphine Vael (Dawnwarden), Lv 1, HP 204/204, Radiance 90, weapon 'Worn Oathblade', zone vale_of_cinders.",
+			"phase": 1,
+			"result": "PASS"
+		},
+		{
+			"description": "Movement",
+			"id": "VS-003",
+			"known_issues": "",
+			"notes": "WASD input actions: velocity after 1 frame(s); walked 19.4 m south and was stopped by the boundary wall at z=63.40 (wall 66.0); moved back north/left/right freely; camera focus offset 0.00 m while moving, 0.11 m at rest.",
+			"phase": 1,
+			"result": "PASS"
+		},
+		{
+			"description": "Quest Start",
+			"id": "VS-014",
+			"known_issues": "",
+			"notes": "Pressed E near Brother Ivenn -> dialogue 'intro' -> 'offer' -> accepted. State=active. Quest log lists 'The Ashen Toll'; HUD tracker: Quests | The Ashen Toll |   - Put down Hollowed Sentinels (0/5) |   - Recover Reliquary Lamp Fragments (0/3) |   - Find the Shrine of the Broken Saint | ",
+			"phase": 1,
+			"result": "PASS"
+		},
+		{
+			"description": "Enemy AI",
+			"id": "VS-007",
+			"known_issues": "",
+			"notes": "Sentinel idle while player was 15 m away (aggro=false); detected the player at 8.4 m (detect radius 13), closed from 8.5 m to 2.2 m, telegraphed and landed 2 hit(s) (HP 204 -> 181); AI states observed: [\"CHASE\", \"WINDUP\", \"RECOVER\"]; it was then killed (died=true). Hit detail: [\"dist 2.2 state WINDUP frame 1090 kb 5.0\", \"dist 0.2 state WINDUP frame 1214 kb 5.0\"]",
+			"phase": 1,
+			"result": "PASS"
+		},
+		{
+			"description": "Basic Combat",
+			"id": "VS-004",
+			"known_issues": "",
+			"notes": "Killed a Hollowed Sentinel with basic attacks (LMB action) only: 5 hits landed, health 60 -> 0, 6 floating damage numbers present, hit flash + knockback applied.",
+			"phase": 1,
+			"result": "PASS"
+		},
+		{
+			"description": "XP",
+			"id": "VS-008",
+			"known_issues": "",
+			"notes": "Killing the sentinel awarded 25 XP (expected 25 from data: base 25, enemy Lv 1 vs player Lv 1); total XP 0 -> 25; HUD XP bar shows 25 == character XP 25.",
+			"phase": 1,
+			"result": "PASS"
+		},
+		{
+			"description": "Skill",
+			"id": "VS-005",
+			"known_issues": "",
+			"notes": "Key 1 cast Radiant Cleave (Light cone): [30] skill damage to the target, resource 90.0 -> 78.0 (cost 12, minus regen), cooldown 2.50s started and blocked immediate re-use; key 2 cast Aegis of Dawn (damage-reduction buff active=true).",
+			"phase": 1,
+			"result": "PASS"
+		},
+		{
+			"description": "Dodge",
+			"id": "VS-006",
+			"known_issues": "",
+			"notes": "Space: dodge moved 5.77 m in 0.32s, i-frames 0.22s then ended, 22 stamina spent, instant re-dodge refused. Spamming dodge for 6 s kept the player invulnerable only 24% of frames (cooldown + stamina gate).",
+			"phase": 1,
+			"result": "PASS"
+		},
+		{
+			"description": "Level Up",
+			"id": "VS-009",
+			"known_issues": "",
+			"notes": "Kill granting 20 XP took the hero from 95 XP (Lv 1, threshold 100) to Lv 2 with 15 XP carried over; 'LEVEL 2' banner shown=true; attribute points 0 -> 5, skill points 0 -> 1; max health 204 -> 213; health refilled=true.",
+			"phase": 1,
+			"result": "PASS"
+		},
+		{
+			"description": "Loot",
+			"id": "VS-010",
+			"known_issues": "",
+			"notes": "Enemy drop 'Vigil Longsword' [common, base sword_vigil, ilvl 1] from enemy:hollow_sentinel: pickup showed rarity beam + name label, walked over it -> in inventory. Total pickups collected in this fight: 3 (2 equipment).",
+			"phase": 1,
+			"result": "PASS"
+		},
+		{
+			"description": "Inventory",
+			"id": "VS-011",
+			"known_issues": "",
+			"notes": "Pressed I: window open=true, 9 bag items shown in the grid with icons; selecting the looted item shows: \"Worn Oathblade / Common Weapon - Sword   Item level 1 / Damage 8 - 12  ▼ -2.5 /  / Power 20  ▼ -5.0 (worse)\"",
+			"phase": 1,
+			"result": "PASS"
+		},
+		{
+			"description": "Equipment",
+			"id": "VS-012",
+			"known_issues": "",
+			"notes": "Equipped 'Vigil Longsword' into weapon via inventory right-click. 'Vigil Longsword' returned to the bag (bag size unchanged). Damage 13-20 -> 13-19, armor 15 -> 15, max health 237 -> 237; live player stats updated=true; duplicate uids=false.",
+			"phase": 1,
+			"result": "PASS"
+		},
+		{
+			"description": "Item Comparison",
+			"id": "VS-013",
+			"known_issues": "",
+			"notes": "Selected 'Vigil Longsword' in the bag while wearing 'Vigil Longsword': the selected panel shows per-stat deltas and a verdict (\"Vigil Longsword / Common Weapon - Sword   Item level 1 / Damage 10 - 15  ▲ +0.5 /  / Power 25  ▲ +1.0 (better)\"); the 'Currently equipped' panel shows 'Vigil Longsword'.",
+			"phase": 1,
+			"result": "PASS"
+		},
+		{
+			"description": "Quest Progression",
+			"id": "VS-015",
+			"known_issues": "",
+			"notes": "Objectives advanced by gameplay: kills 5/5, kills 5/5, shrine explored=true, fragments 4/3, fragments 5/3. Mid-quest save contained the live kill count=true. State now 'ready'.",
+			"phase": 1,
+			"result": "PASS"
+		},
+		{
+			"description": "Quest Completion",
+			"id": "VS-016",
+			"known_issues": "",
+			"notes": "Turned in at Ivenn (node 'toll_done'): +260 XP (Lv 3 -> 3), +75 gold, potions 8 -> 11, random rare item granted (bag 12 -> 12 items), fragments consumed; second completion attempt returned false with no extra gold; Reliquary unsealed; follow-up quest active; completion + rewarded flag present in save=true.",
+			"phase": 1,
+			"result": "PASS"
+		},
+		{
+			"description": "Dungeon",
+			"id": "VS-017",
+			"known_issues": "",
+			"notes": "Gate open after quest=true; pressed E -> zone 'sunken_reliquary' loaded, player at entrance with HP 376/376, 13 enemies + boss spawned; 'Descend' objective updated=true.",
+			"phase": 1,
+			"result": "PASS"
+		},
+		{
+			"description": "Boss",
+			"id": "VS-018",
+			"known_issues": "",
+			"notes": "Entered arena -> boss bar shown=true; boss cast 20 telegraphed area attacks + 7 projectiles; boss hit the player 11 time(s); player damaged boss=true; phase 2 (enrage + summons) reached=true; boss HP trace [\"100%\", \"79%\", \"58%\", \"48%\", \"39%\", \"17%\"]; attempts=1, player deaths so far=0.",
+			"phase": 1,
+			"result": "PASS"
+		},
+		{
+			"description": "Boss Defeat",
+			"id": "VS-019",
+			"known_issues": "",
+			"notes": "Vorthane died: victory banner=true, encounter ended (bar hidden=true), exit portal spawned=true; unique 'Dawnbreaker, Oath of Vorthane's Ruin' dropped and collected=true; world flag boss_defeated_vorthane=true; quest 'The Hollow Bishop' -> ready (objectives {\"enter_reliquary\":1,\"light_brazier\":1,\"slay_bishop\":1}).",
+			"phase": 1,
+			"result": "PASS"
+		},
+		{
+			"description": "Save",
+			"id": "VS-020",
+			"known_issues": "",
+			"notes": "Esc -> Save Game wrote user://saves/slot_1.json (13864 bytes): character Seraphine Vael Lv 5, 794 XP, 609 gold, 20 bag items, 8 equipped, skills {\"aegis_of_dawn\":1,\"ascendant_wrath\":0,\"celestial_ward\":0,\"dawnblade_discipline\":0,\"judgment_circle\":1,\"radiant_cleave\":2,\"sunlance\":1}, quests {\"q_ashen_toll\":\"completed\",\"q_hollow_bishop\":\"ready\"}, world flags {\"boss_defeated_vorthane\":true,\"reliquary_unsealed\":true}, zone sunken_reliquary.",
+			"phase": 1,
+			"result": "PASS"
+		}
+	],
+	"sim_seconds": 297.85,
+	"teleports": [],
+	"wall_seconds": 24.453
+}

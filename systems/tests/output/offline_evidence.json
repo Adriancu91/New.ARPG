@@ -1,0 +1,6 @@
+{
+  "isolation": "unshare -rn",
+  "interfaces": "lo ",
+  "internet_probe": "unreachable: gaierror",
+  "date": "2026-10-04T18:50:10+03:00"
+}

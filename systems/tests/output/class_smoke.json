@@ -1,0 +1,114 @@
+{
+	"all_pass": true,
+	"dawnwarden": {
+		"aegis_of_dawn": {
+			"damage": 0,
+			"executed": true,
+			"pass": true
+		},
+		"ascendant_wrath": {
+			"damage": 66,
+			"executed": true,
+			"pass": true
+		},
+		"basic_attack": {
+			"damage": 9,
+			"executed": true,
+			"pass": true
+		},
+		"heavy_attack": {
+			"damage": 22,
+			"executed": true,
+			"pass": true
+		},
+		"judgment_circle": {
+			"damage": 41,
+			"executed": true,
+			"pass": true
+		},
+		"radiant_cleave": {
+			"damage": 51,
+			"executed": true,
+			"pass": true
+		},
+		"sunlance": {
+			"damage": 23,
+			"executed": true,
+			"pass": true
+		}
+	},
+	"hellbrand": {
+		"basic_attack": {
+			"damage": 11,
+			"executed": true,
+			"pass": true
+		},
+		"brimstone_nova": {
+			"damage": 34,
+			"executed": true,
+			"pass": true
+		},
+		"demonform": {
+			"damage": 0,
+			"executed": true,
+			"pass": true
+		},
+		"heavy_attack": {
+			"damage": 26,
+			"executed": true,
+			"pass": true
+		},
+		"hellfire_orb": {
+			"damage": 27,
+			"executed": true,
+			"pass": true
+		},
+		"infernal_flurry": {
+			"damage": 65.3500000000058,
+			"executed": true,
+			"pass": true
+		},
+		"shadowstep": {
+			"damage": 21.6750000000029,
+			"executed": true,
+			"pass": true
+		}
+	},
+	"starweaver": {
+		"arcane_shot": {
+			"damage": 42,
+			"executed": true,
+			"pass": true
+		},
+		"basic_attack": {
+			"damage": 12,
+			"executed": true,
+			"pass": true
+		},
+		"frost_snare": {
+			"damage": 29,
+			"executed": true,
+			"pass": true
+		},
+		"gale_leap": {
+			"damage": 0,
+			"executed": true,
+			"pass": true
+		},
+		"heavy_attack": {
+			"damage": 18,
+			"executed": true,
+			"pass": true
+		},
+		"split_volley": {
+			"damage": 66,
+			"executed": true,
+			"pass": true
+		},
+		"starfall": {
+			"damage": 72,
+			"executed": true,
+			"pass": true
+		}
+	}
+}
