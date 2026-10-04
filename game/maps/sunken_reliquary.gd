@@ -134,6 +134,12 @@ func _boss_wing() -> void:
 		Props.flicker(self, Color(0.9, 0.2, 0.3), 2.0, 10.0, p + Vector3(0, 6.0, 0))
 	K.part(self, K.cyl(ARENA_R - 1.0, ARENA_R - 1.0, 0.04, 40), K.mat(Color("#2a1e24"), 0.0, 0.8), ARENA + Vector3(0, 0.02, 0))
 	K.part(self, K.torus(5.5, 6.0), K.glow_mat(Color(0.6, 0.1, 0.2), 1.5, 0.7), ARENA + Vector3(0, 0.05, 0), Vector3.ZERO, Vector3(1, 0.05, 1), false)
+	var dome := OmniLight3D.new()
+	dome.light_color = Color(0.55, 0.45, 0.8)
+	dome.light_energy = 1.2
+	dome.omni_range = 28.0
+	dome.position = ARENA + Vector3(0, 12, 0)
+	add_child(dome)
 	poi(ARENA, "boss", "Vorthane")
 	var trig := AreaTrigger.create("area_boss_arena", 9.0, "")
 	add_child(trig)

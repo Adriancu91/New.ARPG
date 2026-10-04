@@ -26,7 +26,7 @@ func is_alive() -> bool:
 
 ## Apply a hit. Returns the final damage dealt.
 func take_hit(hit: Damage.Hit) -> float:
-	if not is_alive():
+	if not is_alive() or hit == null or hit.amount <= 0.0:
 		return 0.0
 	var dmg := Damage.mitigate(hit, armor, tags, _extra_reduction(hit))
 	health = maxf(0.0, health - dmg)

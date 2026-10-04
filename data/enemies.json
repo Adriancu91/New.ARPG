@@ -32,7 +32,7 @@
   },
   "vorthane": {
     "name": "Vorthane, the Hollow Bishop", "archetype": "boss", "tags": ["corrupted", "boss", "humanoid"],
-    "health": 1900, "damage": 24, "armor": 18, "speed": 3.2, "detect": 30.0, "attack_range": 5.0,
+    "health": 1900, "damage": 20, "armor": 18, "speed": 3.2, "detect": 30.0, "attack_range": 5.0,
     "xp": 600, "gold": [150, 220], "loot_chance": 1.0,
     "scale": 2.6, "color": "#2a2228", "glow": "#d64a6a", "knockback_resist": 1.0
   }
